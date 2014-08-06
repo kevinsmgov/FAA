@@ -52,6 +52,10 @@ namespace FAA {
         
         private TRDataTable tableTR;
         
+        private TYPE_REGISTRANTDataTable tableTYPE_REGISTRANT;
+        
+        private REGIONDataTable tableREGION;
+        
         private global::System.Data.DataRelation _relationENGINE_txt_MASTER_txt;
         
         private global::System.Data.DataRelation _relationACFTREF_txt_MASTER_txt;
@@ -71,6 +75,10 @@ namespace FAA {
         private global::System.Data.DataRelation _relationTR_RESERVED_txt;
         
         private global::System.Data.DataRelation _relationTYPE_ENG_ENGINE_txt;
+        
+        private global::System.Data.DataRelation _relationTYPE_REGISTRANT_MASTER_txt;
+        
+        private global::System.Data.DataRelation _relationREGION_MASTER_txt;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -141,6 +149,12 @@ namespace FAA {
                 }
                 if ((ds.Tables["TR"] != null)) {
                     base.Tables.Add(new TRDataTable(ds.Tables["TR"]));
+                }
+                if ((ds.Tables["TYPE REGISTRANT"] != null)) {
+                    base.Tables.Add(new TYPE_REGISTRANTDataTable(ds.Tables["TYPE REGISTRANT"]));
+                }
+                if ((ds.Tables["REGION"] != null)) {
+                    base.Tables.Add(new REGIONDataTable(ds.Tables["REGION"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -302,6 +316,26 @@ namespace FAA {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TYPE_REGISTRANTDataTable TYPE_REGISTRANT {
+            get {
+                return this.tableTYPE_REGISTRANT;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public REGIONDataTable REGION {
+            get {
+                return this.tableREGION;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -408,6 +442,12 @@ namespace FAA {
                 }
                 if ((ds.Tables["TR"] != null)) {
                     base.Tables.Add(new TRDataTable(ds.Tables["TR"]));
+                }
+                if ((ds.Tables["TYPE REGISTRANT"] != null)) {
+                    base.Tables.Add(new TYPE_REGISTRANTDataTable(ds.Tables["TYPE REGISTRANT"]));
+                }
+                if ((ds.Tables["REGION"] != null)) {
+                    base.Tables.Add(new REGIONDataTable(ds.Tables["REGION"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -526,6 +566,18 @@ namespace FAA {
                     this.tableTR.InitVars();
                 }
             }
+            this.tableTYPE_REGISTRANT = ((TYPE_REGISTRANTDataTable)(base.Tables["TYPE REGISTRANT"]));
+            if ((initTable == true)) {
+                if ((this.tableTYPE_REGISTRANT != null)) {
+                    this.tableTYPE_REGISTRANT.InitVars();
+                }
+            }
+            this.tableREGION = ((REGIONDataTable)(base.Tables["REGION"]));
+            if ((initTable == true)) {
+                if ((this.tableREGION != null)) {
+                    this.tableREGION.InitVars();
+                }
+            }
             this._relationENGINE_txt_MASTER_txt = this.Relations["ENGINE.txt_MASTER.txt"];
             this._relationACFTREF_txt_MASTER_txt = this.Relations["ACFTREF.txt_MASTER.txt"];
             this._relationTYPE_ACFT_ACFTREF_txt = this.Relations["TYPE-ACFT_ACFTREF.txt"];
@@ -536,6 +588,8 @@ namespace FAA {
             this._relationTYPE_COLLATERAL_DOCINDEX_txt = this.Relations["TYPE-COLLATERAL_DOCINDEX.txt"];
             this._relationTR_RESERVED_txt = this.Relations["TR_RESERVED.txt"];
             this._relationTYPE_ENG_ENGINE_txt = this.Relations["TYPE-ENG_ENGINE.txt"];
+            this._relationTYPE_REGISTRANT_MASTER_txt = this.Relations["TYPE REGISTRANT_MASTER.txt"];
+            this._relationREGION_MASTER_txt = this.Relations["REGION_MASTER.txt"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -574,6 +628,10 @@ namespace FAA {
             base.Tables.Add(this._tableTYPE_COLLATERAL);
             this.tableTR = new TRDataTable();
             base.Tables.Add(this.tableTR);
+            this.tableTYPE_REGISTRANT = new TYPE_REGISTRANTDataTable();
+            base.Tables.Add(this.tableTYPE_REGISTRANT);
+            this.tableREGION = new REGIONDataTable();
+            base.Tables.Add(this.tableREGION);
             this._relationENGINE_txt_MASTER_txt = new global::System.Data.DataRelation("ENGINE.txt_MASTER.txt", new global::System.Data.DataColumn[] {
                         this._tableENGINE_txt.CODEColumn}, new global::System.Data.DataColumn[] {
                         this._tableMASTER_txt.ENG_MFR_MDLColumn}, false);
@@ -614,6 +672,14 @@ namespace FAA {
                         this._tableTYPE_ENG.TYPEColumn}, new global::System.Data.DataColumn[] {
                         this._tableENGINE_txt.TYPEColumn}, false);
             this.Relations.Add(this._relationTYPE_ENG_ENGINE_txt);
+            this._relationTYPE_REGISTRANT_MASTER_txt = new global::System.Data.DataRelation("TYPE REGISTRANT_MASTER.txt", new global::System.Data.DataColumn[] {
+                        this.tableTYPE_REGISTRANT.TYPEColumn}, new global::System.Data.DataColumn[] {
+                        this._tableMASTER_txt.TYPE_REGISTRANTColumn}, false);
+            this.Relations.Add(this._relationTYPE_REGISTRANT_MASTER_txt);
+            this._relationREGION_MASTER_txt = new global::System.Data.DataRelation("REGION_MASTER.txt", new global::System.Data.DataColumn[] {
+                        this.tableREGION.TYPEColumn}, new global::System.Data.DataColumn[] {
+                        this._tableMASTER_txt.REGIONColumn}, false);
+            this.Relations.Add(this._relationREGION_MASTER_txt);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -697,6 +763,18 @@ namespace FAA {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeTR() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTYPE_REGISTRANT() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeREGION() {
             return false;
         }
         
@@ -796,6 +874,12 @@ namespace FAA {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void TRRowChangeEventHandler(object sender, TRRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void TYPE_REGISTRANTRowChangeEventHandler(object sender, TYPE_REGISTRANTRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void REGIONRowChangeEventHandler(object sender, REGIONRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -4111,14 +4195,14 @@ namespace FAA {
                         _ACFTREF_txtRow _parent_ACFTREF_txtRowByACFTREF_txt_MASTER_txt, 
                         _ENGINE_txtRow _parent_ENGINE_txtRowByENGINE_txt_MASTER_txt, 
                         int YEAR_MFR, 
-                        string TYPE_REGISTRANT, 
+                        TYPE_REGISTRANTRow _parentTYPE_REGISTRANTRowByTYPE_REGISTRANT_MASTER_txt, 
                         string NAME, 
                         string STREET, 
                         string STREET2, 
                         string CITY, 
                         string STATE, 
                         string ZIP_CODE, 
-                        string REGION, 
+                        REGIONRow _parentREGIONRowByREGION_MASTER_txt, 
                         string COUNTY, 
                         string COUNTRY, 
                         System.DateTime LAST_ACTION_DATE, 
@@ -4147,14 +4231,14 @@ namespace FAA {
                         null,
                         null,
                         YEAR_MFR,
-                        TYPE_REGISTRANT,
+                        null,
                         NAME,
                         STREET,
                         STREET2,
                         CITY,
                         STATE,
                         ZIP_CODE,
-                        REGION,
+                        null,
                         COUNTY,
                         COUNTRY,
                         LAST_ACTION_DATE,
@@ -4181,6 +4265,12 @@ namespace FAA {
                 }
                 if ((_parent_ENGINE_txtRowByENGINE_txt_MASTER_txt != null)) {
                     columnValuesArray[3] = _parent_ENGINE_txtRowByENGINE_txt_MASTER_txt[0];
+                }
+                if ((_parentTYPE_REGISTRANTRowByTYPE_REGISTRANT_MASTER_txt != null)) {
+                    columnValuesArray[5] = _parentTYPE_REGISTRANTRowByTYPE_REGISTRANT_MASTER_txt[0];
+                }
+                if ((_parentREGIONRowByREGION_MASTER_txt != null)) {
+                    columnValuesArray[12] = _parentREGIONRowByREGION_MASTER_txt[0];
                 }
                 row_MASTER_txtRow.ItemArray = columnValuesArray;
                 this.Rows.Add(row_MASTER_txtRow);
@@ -4262,7 +4352,7 @@ namespace FAA {
                 base.Columns.Add(this.columnENG_MFR_MDL);
                 this.columnYEAR_MFR = new global::System.Data.DataColumn("YEAR MFR", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYEAR_MFR);
-                this.columnTYPE_REGISTRANT = new global::System.Data.DataColumn("TYPE REGISTRANT", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnTYPE_REGISTRANT = new global::System.Data.DataColumn("TYPE REGISTRANT", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTYPE_REGISTRANT);
                 this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNAME);
@@ -6755,6 +6845,550 @@ namespace FAA {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "TRDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TYPE_REGISTRANTDataTable : global::System.Data.TypedTableBase<TYPE_REGISTRANTRow> {
+            
+            private global::System.Data.DataColumn columnTYPE;
+            
+            private global::System.Data.DataColumn columnNAME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TYPE_REGISTRANTDataTable() {
+                this.TableName = "TYPE REGISTRANT";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TYPE_REGISTRANTDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected TYPE_REGISTRANTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TYPEColumn {
+                get {
+                    return this.columnTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TYPE_REGISTRANTRow this[int index] {
+                get {
+                    return ((TYPE_REGISTRANTRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TYPE_REGISTRANTRowChangeEventHandler TYPE_REGISTRANTRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TYPE_REGISTRANTRowChangeEventHandler TYPE_REGISTRANTRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TYPE_REGISTRANTRowChangeEventHandler TYPE_REGISTRANTRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TYPE_REGISTRANTRowChangeEventHandler TYPE_REGISTRANTRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTYPE_REGISTRANTRow(TYPE_REGISTRANTRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TYPE_REGISTRANTRow AddTYPE_REGISTRANTRow(int TYPE, string NAME) {
+                TYPE_REGISTRANTRow rowTYPE_REGISTRANTRow = ((TYPE_REGISTRANTRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TYPE,
+                        NAME};
+                rowTYPE_REGISTRANTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTYPE_REGISTRANTRow);
+                return rowTYPE_REGISTRANTRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TYPE_REGISTRANTRow FindByTYPE(int TYPE) {
+                return ((TYPE_REGISTRANTRow)(this.Rows.Find(new object[] {
+                            TYPE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TYPE_REGISTRANTDataTable cln = ((TYPE_REGISTRANTDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TYPE_REGISTRANTDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTYPE = base.Columns["TYPE"];
+                this.columnNAME = base.Columns["NAME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTYPE}, true));
+                this.columnTYPE.AllowDBNull = false;
+                this.columnTYPE.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TYPE_REGISTRANTRow NewTYPE_REGISTRANTRow() {
+                return ((TYPE_REGISTRANTRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TYPE_REGISTRANTRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TYPE_REGISTRANTRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TYPE_REGISTRANTRowChanged != null)) {
+                    this.TYPE_REGISTRANTRowChanged(this, new TYPE_REGISTRANTRowChangeEvent(((TYPE_REGISTRANTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TYPE_REGISTRANTRowChanging != null)) {
+                    this.TYPE_REGISTRANTRowChanging(this, new TYPE_REGISTRANTRowChangeEvent(((TYPE_REGISTRANTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TYPE_REGISTRANTRowDeleted != null)) {
+                    this.TYPE_REGISTRANTRowDeleted(this, new TYPE_REGISTRANTRowChangeEvent(((TYPE_REGISTRANTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TYPE_REGISTRANTRowDeleting != null)) {
+                    this.TYPE_REGISTRANTRowDeleting(this, new TYPE_REGISTRANTRowChangeEvent(((TYPE_REGISTRANTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTYPE_REGISTRANTRow(TYPE_REGISTRANTRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                AircraftRegistrationSet ds = new AircraftRegistrationSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TYPE_REGISTRANTDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class REGIONDataTable : global::System.Data.TypedTableBase<REGIONRow> {
+            
+            private global::System.Data.DataColumn columnTYPE;
+            
+            private global::System.Data.DataColumn columnNAME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public REGIONDataTable() {
+                this.TableName = "REGION";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal REGIONDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected REGIONDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TYPEColumn {
+                get {
+                    return this.columnTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public REGIONRow this[int index] {
+                get {
+                    return ((REGIONRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event REGIONRowChangeEventHandler REGIONRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event REGIONRowChangeEventHandler REGIONRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event REGIONRowChangeEventHandler REGIONRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event REGIONRowChangeEventHandler REGIONRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddREGIONRow(REGIONRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public REGIONRow AddREGIONRow(string TYPE, string NAME) {
+                REGIONRow rowREGIONRow = ((REGIONRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TYPE,
+                        NAME};
+                rowREGIONRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowREGIONRow);
+                return rowREGIONRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public REGIONRow FindByTYPE(string TYPE) {
+                return ((REGIONRow)(this.Rows.Find(new object[] {
+                            TYPE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                REGIONDataTable cln = ((REGIONDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new REGIONDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTYPE = base.Columns["TYPE"];
+                this.columnNAME = base.Columns["NAME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTYPE}, true));
+                this.columnTYPE.AllowDBNull = false;
+                this.columnTYPE.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public REGIONRow NewREGIONRow() {
+                return ((REGIONRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new REGIONRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(REGIONRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.REGIONRowChanged != null)) {
+                    this.REGIONRowChanged(this, new REGIONRowChangeEvent(((REGIONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.REGIONRowChanging != null)) {
+                    this.REGIONRowChanging(this, new REGIONRowChangeEvent(((REGIONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.REGIONRowDeleted != null)) {
+                    this.REGIONRowDeleted(this, new REGIONRowChangeEvent(((REGIONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.REGIONRowDeleting != null)) {
+                    this.REGIONRowDeleting(this, new REGIONRowChangeEvent(((REGIONRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveREGIONRow(REGIONRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                AircraftRegistrationSet ds = new AircraftRegistrationSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "REGIONDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -9831,10 +10465,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TYPE_REGISTRANT {
+            public int TYPE_REGISTRANT {
                 get {
                     try {
-                        return ((string)(this[this._tableMASTER_txt.TYPE_REGISTRANTColumn]));
+                        return ((int)(this[this._tableMASTER_txt.TYPE_REGISTRANTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TYPE REGISTRANT\' in table \'MASTER.txt\' is DBNull.", e);
@@ -10312,6 +10946,28 @@ namespace FAA {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["ACFTREF.txt_MASTER.txt"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TYPE_REGISTRANTRow TYPE_REGISTRANTRow {
+                get {
+                    return ((TYPE_REGISTRANTRow)(this.GetParentRow(this.Table.ParentRelations["TYPE REGISTRANT_MASTER.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["TYPE REGISTRANT_MASTER.txt"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public REGIONRow REGIONRow {
+                get {
+                    return ((REGIONRow)(this.GetParentRow(this.Table.ParentRelations["REGION_MASTER.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["REGION_MASTER.txt"]);
                 }
             }
             
@@ -11496,6 +12152,136 @@ namespace FAA {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TYPE_REGISTRANTRow : global::System.Data.DataRow {
+            
+            private TYPE_REGISTRANTDataTable tableTYPE_REGISTRANT;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TYPE_REGISTRANTRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTYPE_REGISTRANT = ((TYPE_REGISTRANTDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TYPE {
+                get {
+                    return ((int)(this[this.tableTYPE_REGISTRANT.TYPEColumn]));
+                }
+                set {
+                    this[this.tableTYPE_REGISTRANT.TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableTYPE_REGISTRANT.NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'TYPE REGISTRANT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTYPE_REGISTRANT.NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNAMENull() {
+                return this.IsNull(this.tableTYPE_REGISTRANT.NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNAMENull() {
+                this[this.tableTYPE_REGISTRANT.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _MASTER_txtRow[] _GetMASTER_txtRows() {
+                if ((this.Table.ChildRelations["TYPE REGISTRANT_MASTER.txt"] == null)) {
+                    return new _MASTER_txtRow[0];
+                }
+                else {
+                    return ((_MASTER_txtRow[])(base.GetChildRows(this.Table.ChildRelations["TYPE REGISTRANT_MASTER.txt"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class REGIONRow : global::System.Data.DataRow {
+            
+            private REGIONDataTable tableREGION;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal REGIONRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableREGION = ((REGIONDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TYPE {
+                get {
+                    return ((string)(this[this.tableREGION.TYPEColumn]));
+                }
+                set {
+                    this[this.tableREGION.TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableREGION.NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'REGION\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableREGION.NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNAMENull() {
+                return this.IsNull(this.tableREGION.NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNAMENull() {
+                this[this.tableREGION.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _MASTER_txtRow[] _GetMASTER_txtRows() {
+                if ((this.Table.ChildRelations["REGION_MASTER.txt"] == null)) {
+                    return new _MASTER_txtRow[0];
+                }
+                else {
+                    return ((_MASTER_txtRow[])(base.GetChildRows(this.Table.ChildRelations["REGION_MASTER.txt"])));
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -11957,6 +12743,74 @@ namespace FAA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public TRRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class TYPE_REGISTRANTRowChangeEvent : global::System.EventArgs {
+            
+            private TYPE_REGISTRANTRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TYPE_REGISTRANTRowChangeEvent(TYPE_REGISTRANTRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TYPE_REGISTRANTRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class REGIONRowChangeEvent : global::System.EventArgs {
+            
+            private REGIONRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public REGIONRowChangeEvent(REGIONRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public REGIONRow Row {
                 get {
                     return this.eventRow;
                 }

@@ -52,10 +52,12 @@ namespace FAA
             AircraftRegistrationSet._AC_CAT.ReadXml("AC-CAT.xml");
             AircraftRegistrationSet._AC_WEIGHT.ReadXml("AC-WEIGHT.xml");
             AircraftRegistrationSet._BUILD_CERT_IND.ReadXml("BUILD-CERT-IND.xml");
+            AircraftRegistrationSet.REGION.ReadXml("REGION.xml");
             AircraftRegistrationSet.TR.ReadXml("TR.xml");
             AircraftRegistrationSet._TYPE_ACFT.ReadXml("TYPE-ACFT.xml");
             AircraftRegistrationSet._TYPE_COLLATERAL.ReadXml("TYPE-COLLATERAL.xml");
             AircraftRegistrationSet._TYPE_ENG.ReadXml("TYPE-ENG.xml");
+            AircraftRegistrationSet.TYPE_REGISTRANT.ReadXml("TYPE_REGISTRANT.xml");
             using (var zipStream = File.OpenRead(zipPath))
             {
                 using (var zipArchive = new ZipArchive(zipStream))

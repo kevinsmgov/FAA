@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AircraftRegistrationSet xmlns="http://tempuri.org/AircraftRegistrationSet.xsd">
+  <TYPE_REGISTRANT>
+    <TYPE>1</TYPE>
+    <NAME>Individual</NAME>
+  </TYPE_REGISTRANT>
+  <TYPE_REGISTRANT>
+    <TYPE>2</TYPE>
+    <NAME>Partnership</NAME>
+  </TYPE_REGISTRANT>
+  <TYPE_REGISTRANT>
+    <TYPE>3</TYPE>
+    <NAME>Corporation</NAME>
+  </TYPE_REGISTRANT>
+  <TYPE_REGISTRANT>
+    <TYPE>4</TYPE>
+    <NAME>Co-Owned</NAME>
+  </TYPE_REGISTRANT>
+  <TYPE_REGISTRANT>
+    <TYPE>5</TYPE>
+    <NAME>Government</NAME>
+  </TYPE_REGISTRANT>
+  <TYPE_REGISTRANT>
+    <TYPE>8</TYPE>
+    <NAME>Non Citizen Corporation</NAME>
+  </TYPE_REGISTRANT>
+  <TYPE_REGISTRANT>
+    <TYPE>9</TYPE>
+    <NAME>Non Citizen Co-Owned</NAME>
+  </TYPE_REGISTRANT>
+</AircraftRegistrationSet>
