@@ -18,14 +18,14 @@
               <xs:element name="CODE" msprop:Generator_ColumnVarNameInTable="columnCODE" msprop:Generator_ColumnPropNameInRow="CODE" msprop:Generator_ColumnPropNameInTable="CODEColumn" msprop:Generator_UserColumnName="CODE" type="xs:string" />
               <xs:element name="MFR" msprop:Generator_ColumnVarNameInTable="columnMFR" msprop:Generator_ColumnPropNameInRow="MFR" msprop:Generator_ColumnPropNameInTable="MFRColumn" msprop:Generator_UserColumnName="MFR" type="xs:string" minOccurs="0" />
               <xs:element name="MODEL" msprop:Generator_ColumnVarNameInTable="columnMODEL" msprop:Generator_ColumnPropNameInRow="MODEL" msprop:Generator_ColumnPropNameInTable="MODELColumn" msprop:Generator_UserColumnName="MODEL" type="xs:string" minOccurs="0" />
-              <xs:element name="TYPE-ACFT" msprop:Generator_ColumnVarNameInTable="_columnTYPE_ACFT" msprop:Generator_ColumnPropNameInRow="_TYPE_ACFT" msprop:Generator_ColumnPropNameInTable="_TYPE_ACFTColumn" msprop:Generator_UserColumnName="TYPE-ACFT" type="xs:string" minOccurs="0" />
-              <xs:element name="TYPE-ENG" msprop:Generator_ColumnVarNameInTable="_columnTYPE_ENG" msprop:Generator_ColumnPropNameInRow="_TYPE_ENG" msprop:Generator_ColumnPropNameInTable="_TYPE_ENGColumn" msprop:Generator_UserColumnName="TYPE-ENG" type="xs:string" minOccurs="0" />
-              <xs:element name="AC-CAT" msprop:Generator_ColumnVarNameInTable="_columnAC_CAT" msprop:Generator_ColumnPropNameInRow="_AC_CAT" msprop:Generator_ColumnPropNameInTable="_AC_CATColumn" msprop:Generator_UserColumnName="AC-CAT" type="xs:string" minOccurs="0" />
-              <xs:element name="BUILD-CERT-IND" msprop:Generator_ColumnVarNameInTable="_columnBUILD_CERT_IND" msprop:Generator_ColumnPropNameInRow="_BUILD_CERT_IND" msprop:Generator_ColumnPropNameInTable="_BUILD_CERT_INDColumn" msprop:Generator_UserColumnName="BUILD-CERT-IND" type="xs:string" minOccurs="0" />
-              <xs:element name="NO-ENG" msprop:Generator_ColumnVarNameInTable="_columnNO_ENG" msprop:Generator_ColumnPropNameInRow="_NO_ENG" msprop:Generator_ColumnPropNameInTable="_NO_ENGColumn" msprop:Generator_UserColumnName="NO-ENG" type="xs:string" minOccurs="0" />
-              <xs:element name="NO-SEATS" msprop:Generator_ColumnVarNameInTable="_columnNO_SEATS" msprop:Generator_ColumnPropNameInRow="_NO_SEATS" msprop:Generator_ColumnPropNameInTable="_NO_SEATSColumn" msprop:Generator_UserColumnName="NO-SEATS" type="xs:string" minOccurs="0" />
-              <xs:element name="AC-WEIGHT" msprop:Generator_ColumnVarNameInTable="_columnAC_WEIGHT" msprop:Generator_ColumnPropNameInRow="_AC_WEIGHT" msprop:Generator_ColumnPropNameInTable="_AC_WEIGHTColumn" msprop:Generator_UserColumnName="AC-WEIGHT" type="xs:string" minOccurs="0" />
-              <xs:element name="SPEED" msprop:Generator_ColumnVarNameInTable="columnSPEED" msprop:Generator_ColumnPropNameInRow="SPEED" msprop:Generator_ColumnPropNameInTable="SPEEDColumn" msprop:Generator_UserColumnName="SPEED" type="xs:string" minOccurs="0" />
+              <xs:element name="TYPE-ACFT" msprop:Generator_ColumnVarNameInTable="_columnTYPE_ACFT" msprop:Generator_ColumnPropNameInRow="_TYPE_ACFT" msprop:Generator_ColumnPropNameInTable="_TYPE_ACFTColumn" msprop:Generator_UserColumnName="TYPE-ACFT" type="xs:int" minOccurs="0" />
+              <xs:element name="TYPE-ENG" msprop:Generator_ColumnVarNameInTable="_columnTYPE_ENG" msprop:Generator_ColumnPropNameInRow="_TYPE_ENG" msprop:Generator_ColumnPropNameInTable="_TYPE_ENGColumn" msprop:Generator_UserColumnName="TYPE-ENG" type="xs:int" minOccurs="0" />
+              <xs:element name="AC-CAT" msprop:Generator_ColumnVarNameInTable="_columnAC_CAT" msprop:Generator_ColumnPropNameInRow="_AC_CAT" msprop:Generator_ColumnPropNameInTable="_AC_CATColumn" msprop:Generator_UserColumnName="AC-CAT" type="xs:int" minOccurs="0" />
+              <xs:element name="BUILD-CERT-IND" msprop:Generator_ColumnVarNameInTable="_columnBUILD_CERT_IND" msprop:Generator_ColumnPropNameInRow="_BUILD_CERT_IND" msprop:Generator_ColumnPropNameInTable="_BUILD_CERT_INDColumn" msprop:Generator_UserColumnName="BUILD-CERT-IND" type="xs:int" minOccurs="0" />
+              <xs:element name="NO-ENG" msprop:Generator_ColumnVarNameInTable="_columnNO_ENG" msprop:Generator_ColumnPropNameInRow="_NO_ENG" msprop:Generator_ColumnPropNameInTable="_NO_ENGColumn" msprop:Generator_UserColumnName="NO-ENG" type="xs:int" minOccurs="0" />
+              <xs:element name="NO-SEATS" msprop:Generator_ColumnVarNameInTable="_columnNO_SEATS" msprop:Generator_ColumnPropNameInRow="_NO_SEATS" msprop:Generator_ColumnPropNameInTable="_NO_SEATSColumn" msprop:Generator_UserColumnName="NO-SEATS" type="xs:int" minOccurs="0" />
+              <xs:element name="AC-WEIGHT" msprop:Generator_ColumnVarNameInTable="_columnAC_WEIGHT" msprop:Generator_ColumnPropNameInRow="_AC_WEIGHT" msprop:Generator_ColumnPropNameInTable="_AC_WEIGHTColumn" msprop:Generator_UserColumnName="AC-WEIGHT" type="xs:int" minOccurs="0" />
+              <xs:element name="SPEED" msprop:Generator_ColumnVarNameInTable="columnSPEED" msprop:Generator_ColumnPropNameInRow="SPEED" msprop:Generator_ColumnPropNameInTable="SPEEDColumn" msprop:Generator_UserColumnName="SPEED" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -120,11 +120,11 @@
         <xs:element name="DOCINDEX.txt" msprop:Generator_TableClassName="_DOCINDEX_txtDataTable" msprop:Generator_TableVarName="_tableDOCINDEX_txt" msprop:Generator_TablePropName="_DOCINDEX_txt" msprop:Generator_RowDeletingName="_DOCINDEX_txtRowDeleting" msprop:Generator_RowChangingName="_DOCINDEX_txtRowChanging" msprop:Generator_RowEvHandlerName="_DOCINDEX_txtRowChangeEventHandler" msprop:Generator_RowDeletedName="_DOCINDEX_txtRowDeleted" msprop:Generator_UserTableName="DOCINDEX.txt" msprop:Generator_RowChangedName="_DOCINDEX_txtRowChanged" msprop:Generator_RowEvArgName="_DOCINDEX_txtRowChangeEvent" msprop:Generator_RowClassName="_DOCINDEX_txtRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="TYPE-COLLATERAL" msprop:Generator_ColumnVarNameInTable="_columnTYPE_COLLATERAL" msprop:Generator_ColumnPropNameInRow="_TYPE_COLLATERAL" msprop:Generator_ColumnPropNameInTable="_TYPE_COLLATERALColumn" msprop:Generator_UserColumnName="TYPE-COLLATERAL" type="xs:string" />
+              <xs:element name="TYPE-COLLATERAL" msprop:Generator_ColumnVarNameInTable="_columnTYPE_COLLATERAL" msprop:Generator_ColumnPropNameInRow="_TYPE_COLLATERAL" msprop:Generator_ColumnPropNameInTable="_TYPE_COLLATERALColumn" msprop:Generator_UserColumnName="TYPE-COLLATERAL" type="xs:int" />
               <xs:element name="COLLATERAL" msprop:Generator_ColumnVarNameInTable="columnCOLLATERAL" msprop:Generator_ColumnPropNameInRow="COLLATERAL" msprop:Generator_ColumnPropNameInTable="COLLATERALColumn" msprop:Generator_UserColumnName="COLLATERAL" type="xs:string" minOccurs="0" />
               <xs:element name="PARTY" msprop:Generator_ColumnVarNameInTable="columnPARTY" msprop:Generator_ColumnPropNameInRow="PARTY" msprop:Generator_ColumnPropNameInTable="PARTYColumn" msprop:Generator_UserColumnName="PARTY" type="xs:string" minOccurs="0" />
               <xs:element name="DOC-ID" msprop:Generator_ColumnVarNameInTable="_columnDOC_ID" msprop:Generator_ColumnPropNameInRow="_DOC_ID" msprop:Generator_ColumnPropNameInTable="_DOC_IDColumn" msprop:Generator_UserColumnName="DOC-ID" type="xs:string" minOccurs="0" />
-              <xs:element name="DRDATE" msprop:Generator_ColumnVarNameInTable="columnDRDATE" msprop:Generator_ColumnPropNameInRow="DRDATE" msprop:Generator_ColumnPropNameInTable="DRDATEColumn" msprop:Generator_UserColumnName="DRDATE" type="xs:string" minOccurs="0" />
+              <xs:element name="DRDATE" msprop:Generator_ColumnVarNameInTable="columnDRDATE" msprop:Generator_ColumnPropNameInRow="DRDATE" msprop:Generator_ColumnPropNameInTable="DRDATEColumn" msprop:Generator_UserColumnName="DRDATE" type="xs:dateTime" minOccurs="0" />
               <xs:element name="PROCESSING-DATE" msprop:Generator_ColumnVarNameInTable="_columnPROCESSING_DATE" msprop:Generator_ColumnPropNameInRow="_PROCESSING_DATE" msprop:Generator_ColumnPropNameInTable="_PROCESSING_DATEColumn" msprop:Generator_UserColumnName="PROCESSING-DATE" type="xs:dateTime" minOccurs="0" />
               <xs:element name="CORR-DATE" msprop:Generator_ColumnVarNameInTable="_columnCORR_DATE" msprop:Generator_ColumnPropNameInRow="_CORR_DATE" msprop:Generator_ColumnPropNameInTable="_CORR_DATEColumn" msprop:Generator_UserColumnName="CORR-DATE" type="xs:dateTime" minOccurs="0" />
               <xs:element name="CORR-ID" msprop:Generator_ColumnVarNameInTable="_columnCORR_ID" msprop:Generator_ColumnPropNameInRow="_CORR_ID" msprop:Generator_ColumnPropNameInTable="_CORR_IDColumn" msprop:Generator_UserColumnName="CORR-ID" type="xs:string" minOccurs="0" />
@@ -138,7 +138,7 @@
               <xs:element name="CODE" msprop:Generator_ColumnVarNameInTable="columnCODE" msprop:Generator_ColumnPropNameInRow="CODE" msprop:Generator_ColumnPropNameInTable="CODEColumn" msprop:Generator_UserColumnName="CODE" type="xs:string" />
               <xs:element name="MFR" msprop:Generator_ColumnVarNameInTable="columnMFR" msprop:Generator_ColumnPropNameInRow="MFR" msprop:Generator_ColumnPropNameInTable="MFRColumn" msprop:Generator_UserColumnName="MFR" type="xs:string" minOccurs="0" />
               <xs:element name="MODEL" msprop:Generator_ColumnVarNameInTable="columnMODEL" msprop:Generator_ColumnPropNameInRow="MODEL" msprop:Generator_ColumnPropNameInTable="MODELColumn" msprop:Generator_UserColumnName="MODEL" type="xs:string" minOccurs="0" />
-              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:int" minOccurs="0" />
               <xs:element name="HORSEPOWER" msprop:Generator_ColumnVarNameInTable="columnHORSEPOWER" msprop:Generator_ColumnPropNameInRow="HORSEPOWER" msprop:Generator_ColumnPropNameInTable="HORSEPOWERColumn" msprop:Generator_UserColumnName="HORSEPOWER" type="xs:int" minOccurs="0" />
               <xs:element name="THRUST" msprop:Generator_ColumnVarNameInTable="columnTHRUST" msprop:Generator_ColumnPropNameInRow="THRUST" msprop:Generator_ColumnPropNameInTable="THRUSTColumn" msprop:Generator_UserColumnName="THRUST" type="xs:int" minOccurs="0" />
             </xs:sequence>
@@ -201,6 +201,62 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TYPE-ACFT" msprop:Generator_TableClassName="_TYPE_ACFTDataTable" msprop:Generator_TableVarName="_tableTYPE_ACFT" msprop:Generator_TablePropName="_TYPE_ACFT" msprop:Generator_RowDeletingName="_TYPE_ACFTRowDeleting" msprop:Generator_RowChangingName="_TYPE_ACFTRowChanging" msprop:Generator_RowEvHandlerName="_TYPE_ACFTRowChangeEventHandler" msprop:Generator_RowDeletedName="_TYPE_ACFTRowDeleted" msprop:Generator_UserTableName="TYPE-ACFT" msprop:Generator_RowChangedName="_TYPE_ACFTRowChanged" msprop:Generator_RowEvArgName="_TYPE_ACFTRowChangeEvent" msprop:Generator_RowClassName="_TYPE_ACFTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:int" />
+              <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TYPE-ENG" msprop:Generator_TableClassName="_TYPE_ENGDataTable" msprop:Generator_TableVarName="_tableTYPE_ENG" msprop:Generator_TablePropName="_TYPE_ENG" msprop:Generator_RowDeletingName="_TYPE_ENGRowDeleting" msprop:Generator_RowChangingName="_TYPE_ENGRowChanging" msprop:Generator_RowEvHandlerName="_TYPE_ENGRowChangeEventHandler" msprop:Generator_RowDeletedName="_TYPE_ENGRowDeleted" msprop:Generator_UserTableName="TYPE-ENG" msprop:Generator_RowChangedName="_TYPE_ENGRowChanged" msprop:Generator_RowEvArgName="_TYPE_ENGRowChangeEvent" msprop:Generator_RowClassName="_TYPE_ENGRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:int" />
+              <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AC-CAT" msprop:Generator_TableClassName="_AC_CATDataTable" msprop:Generator_TableVarName="_tableAC_CAT" msprop:Generator_TablePropName="_AC_CAT" msprop:Generator_RowDeletingName="_AC_CATRowDeleting" msprop:Generator_RowChangingName="_AC_CATRowChanging" msprop:Generator_RowEvHandlerName="_AC_CATRowChangeEventHandler" msprop:Generator_RowDeletedName="_AC_CATRowDeleted" msprop:Generator_UserTableName="AC-CAT" msprop:Generator_RowChangedName="_AC_CATRowChanged" msprop:Generator_RowEvArgName="_AC_CATRowChangeEvent" msprop:Generator_RowClassName="_AC_CATRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:int" />
+              <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BUILD-CERT-IND" msprop:Generator_TableClassName="_BUILD_CERT_INDDataTable" msprop:Generator_TableVarName="_tableBUILD_CERT_IND" msprop:Generator_TablePropName="_BUILD_CERT_IND" msprop:Generator_RowDeletingName="_BUILD_CERT_INDRowDeleting" msprop:Generator_RowChangingName="_BUILD_CERT_INDRowChanging" msprop:Generator_RowEvHandlerName="_BUILD_CERT_INDRowChangeEventHandler" msprop:Generator_RowDeletedName="_BUILD_CERT_INDRowDeleted" msprop:Generator_UserTableName="BUILD-CERT-IND" msprop:Generator_RowChangedName="_BUILD_CERT_INDRowChanged" msprop:Generator_RowEvArgName="_BUILD_CERT_INDRowChangeEvent" msprop:Generator_RowClassName="_BUILD_CERT_INDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:int" />
+              <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AC-WEIGHT" msprop:Generator_TableClassName="_AC_WEIGHTDataTable" msprop:Generator_TableVarName="_tableAC_WEIGHT" msprop:Generator_TablePropName="_AC_WEIGHT" msprop:Generator_RowDeletingName="_AC_WEIGHTRowDeleting" msprop:Generator_RowChangingName="_AC_WEIGHTRowChanging" msprop:Generator_RowEvHandlerName="_AC_WEIGHTRowChangeEventHandler" msprop:Generator_RowDeletedName="_AC_WEIGHTRowDeleted" msprop:Generator_UserTableName="AC-WEIGHT" msprop:Generator_RowChangedName="_AC_WEIGHTRowChanged" msprop:Generator_RowEvArgName="_AC_WEIGHTRowChangeEvent" msprop:Generator_RowClassName="_AC_WEIGHTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:int" />
+              <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TYPE-COLLATERAL" msprop:Generator_TableClassName="_TYPE_COLLATERALDataTable" msprop:Generator_TableVarName="_tableTYPE_COLLATERAL" msprop:Generator_TablePropName="_TYPE_COLLATERAL" msprop:Generator_RowDeletingName="_TYPE_COLLATERALRowDeleting" msprop:Generator_RowChangingName="_TYPE_COLLATERALRowChanging" msprop:Generator_RowEvHandlerName="_TYPE_COLLATERALRowChangeEventHandler" msprop:Generator_RowDeletedName="_TYPE_COLLATERALRowDeleted" msprop:Generator_UserTableName="TYPE-COLLATERAL" msprop:Generator_RowChangedName="_TYPE_COLLATERALRowChanged" msprop:Generator_RowEvArgName="_TYPE_COLLATERALRowChangeEvent" msprop:Generator_RowClassName="_TYPE_COLLATERALRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:int" />
+              <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TR" msprop:Generator_TableClassName="TRDataTable" msprop:Generator_TableVarName="tableTR" msprop:Generator_RowChangedName="TRRowChanged" msprop:Generator_TablePropName="TR" msprop:Generator_RowDeletingName="TRRowDeleting" msprop:Generator_RowChangingName="TRRowChanging" msprop:Generator_RowEvHandlerName="TRRowChangeEventHandler" msprop:Generator_RowDeletedName="TRRowDeleted" msprop:Generator_RowClassName="TRRow" msprop:Generator_UserTableName="TR" msprop:Generator_RowEvArgName="TRRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TYPE" msprop:Generator_ColumnVarNameInTable="columnTYPE" msprop:Generator_ColumnPropNameInRow="TYPE" msprop:Generator_ColumnPropNameInTable="TYPEColumn" msprop:Generator_UserColumnName="TYPE" type="xs:string" />
+              <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -223,11 +279,47 @@
       <xs:selector xpath=".//mstns:RESERVED.txt" />
       <xs:field xpath="mstns:N-NUMBER" />
     </xs:unique>
+    <xs:unique name="TYPE-ACFT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TYPE-ACFT" />
+      <xs:field xpath="mstns:TYPE" />
+    </xs:unique>
+    <xs:unique name="TYPE-ENG_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TYPE-ENG" />
+      <xs:field xpath="mstns:TYPE" />
+    </xs:unique>
+    <xs:unique name="AC-CAT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AC-CAT" />
+      <xs:field xpath="mstns:TYPE" />
+    </xs:unique>
+    <xs:unique name="BUILD-CERT-IND_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BUILD-CERT-IND" />
+      <xs:field xpath="mstns:TYPE" />
+    </xs:unique>
+    <xs:unique name="AC-WEIGHT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AC-WEIGHT" />
+      <xs:field xpath="mstns:TYPE" />
+    </xs:unique>
+    <xs:unique name="TYPE-COLLATERAL_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TYPE-COLLATERAL" />
+      <xs:field xpath="mstns:TYPE" />
+    </xs:unique>
+    <xs:unique name="TR_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TR" />
+      <xs:field xpath="mstns:TYPE" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
       <msdata:Relationship name="ENGINE.txt_MASTER.txt" msdata:parent="ENGINE.txt" msdata:child="MASTER.txt" msdata:parentkey="CODE" msdata:childkey="ENG_x0020_MFR_x0020_MDL" msprop:Generator_UserChildTable="MASTER.txt" msprop:Generator_ChildPropName="_GetMASTER_txtRows" msprop:Generator_UserRelationName="ENGINE.txt_MASTER.txt" msprop:Generator_ParentPropName="_ENGINE_txtRow" msprop:Generator_RelationVarName="_relationENGINE_txt_MASTER_txt" msprop:Generator_UserParentTable="ENGINE.txt" />
       <msdata:Relationship name="ACFTREF.txt_MASTER.txt" msdata:parent="ACFTREF.txt" msdata:child="MASTER.txt" msdata:parentkey="CODE" msdata:childkey="MFR_x0020_MDL_x0020_CODE" msprop:Generator_UserChildTable="MASTER.txt" msprop:Generator_ChildPropName="_GetMASTER_txtRows" msprop:Generator_UserRelationName="ACFTREF.txt_MASTER.txt" msprop:Generator_ParentPropName="_ACFTREF_txtRow" msprop:Generator_RelationVarName="_relationACFTREF_txt_MASTER_txt" msprop:Generator_UserParentTable="ACFTREF.txt" />
+      <msdata:Relationship name="TYPE-ACFT_ACFTREF.txt" msdata:parent="TYPE-ACFT" msdata:child="ACFTREF.txt" msdata:parentkey="TYPE" msdata:childkey="TYPE-ACFT" msprop:Generator_UserChildTable="ACFTREF.txt" msprop:Generator_ChildPropName="_GetACFTREF_txtRows" msprop:Generator_UserRelationName="TYPE-ACFT_ACFTREF.txt" msprop:Generator_RelationVarName="_relationTYPE_ACFT_ACFTREF_txt" msprop:Generator_UserParentTable="TYPE-ACFT" msprop:Generator_ParentPropName="_TYPE_ACFTRow" />
+      <msdata:Relationship name="TYPE-ENG_ACFTREF.txt" msdata:parent="TYPE-ENG" msdata:child="ACFTREF.txt" msdata:parentkey="TYPE" msdata:childkey="TYPE-ENG" msprop:Generator_UserChildTable="ACFTREF.txt" msprop:Generator_ChildPropName="_GetACFTREF_txtRows" msprop:Generator_UserRelationName="TYPE-ENG_ACFTREF.txt" msprop:Generator_RelationVarName="_relationTYPE_ENG_ACFTREF_txt" msprop:Generator_UserParentTable="TYPE-ENG" msprop:Generator_ParentPropName="_TYPE_ENGRow" />
+      <msdata:Relationship name="AC-CAT_ACFTREF.txt" msdata:parent="AC-CAT" msdata:child="ACFTREF.txt" msdata:parentkey="TYPE" msdata:childkey="AC-CAT" msprop:Generator_UserChildTable="ACFTREF.txt" msprop:Generator_ChildPropName="_GetACFTREF_txtRows" msprop:Generator_UserRelationName="AC-CAT_ACFTREF.txt" msprop:Generator_RelationVarName="_relationAC_CAT_ACFTREF_txt" msprop:Generator_UserParentTable="AC-CAT" msprop:Generator_ParentPropName="_AC_CATRow" />
+      <msdata:Relationship name="BUILD-CERT-IND_ACFTREF.txt" msdata:parent="BUILD-CERT-IND" msdata:child="ACFTREF.txt" msdata:parentkey="TYPE" msdata:childkey="BUILD-CERT-IND" msprop:Generator_UserChildTable="ACFTREF.txt" msprop:Generator_ChildPropName="_GetACFTREF_txtRows" msprop:Generator_UserRelationName="BUILD-CERT-IND_ACFTREF.txt" msprop:Generator_RelationVarName="_relationBUILD_CERT_IND_ACFTREF_txt" msprop:Generator_UserParentTable="BUILD-CERT-IND" msprop:Generator_ParentPropName="_BUILD_CERT_INDRow" />
+      <msdata:Relationship name="AC-WEIGHT_ACFTREF.txt" msdata:parent="AC-WEIGHT" msdata:child="ACFTREF.txt" msdata:parentkey="TYPE" msdata:childkey="AC-WEIGHT" msprop:Generator_UserChildTable="ACFTREF.txt" msprop:Generator_ChildPropName="_GetACFTREF_txtRows" msprop:Generator_UserRelationName="AC-WEIGHT_ACFTREF.txt" msprop:Generator_RelationVarName="_relationAC_WEIGHT_ACFTREF_txt" msprop:Generator_UserParentTable="AC-WEIGHT" msprop:Generator_ParentPropName="_AC_WEIGHTRow" />
+      <msdata:Relationship name="TYPE-COLLATERAL_DOCINDEX.txt" msdata:parent="TYPE-COLLATERAL" msdata:child="DOCINDEX.txt" msdata:parentkey="TYPE" msdata:childkey="TYPE-COLLATERAL" msprop:Generator_UserChildTable="DOCINDEX.txt" msprop:Generator_ChildPropName="_GetDOCINDEX_txtRows" msprop:Generator_UserRelationName="TYPE-COLLATERAL_DOCINDEX.txt" msprop:Generator_RelationVarName="_relationTYPE_COLLATERAL_DOCINDEX_txt" msprop:Generator_UserParentTable="TYPE-COLLATERAL" msprop:Generator_ParentPropName="_TYPE_COLLATERALRow" />
+      <msdata:Relationship name="TR_RESERVED.txt" msdata:parent="TR" msdata:child="RESERVED.txt" msdata:parentkey="TYPE" msdata:childkey="TR" msprop:Generator_UserChildTable="RESERVED.txt" msprop:Generator_ChildPropName="_GetRESERVED_txtRows" msprop:Generator_UserRelationName="TR_RESERVED.txt" msprop:Generator_ParentPropName="TRRow" msprop:Generator_RelationVarName="_relationTR_RESERVED_txt" msprop:Generator_UserParentTable="TR" />
+      <msdata:Relationship name="TYPE-ENG_ENGINE.txt" msdata:parent="TYPE-ENG" msdata:child="ENGINE.txt" msdata:parentkey="TYPE" msdata:childkey="TYPE" msprop:Generator_UserChildTable="ENGINE.txt" msprop:Generator_ChildPropName="_GetENGINE_txtRows" msprop:Generator_UserRelationName="TYPE-ENG_ENGINE.txt" msprop:Generator_RelationVarName="_relationTYPE_ENG_ENGINE_txt" msprop:Generator_UserParentTable="TYPE-ENG" msprop:Generator_ParentPropName="_TYPE_ENGRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

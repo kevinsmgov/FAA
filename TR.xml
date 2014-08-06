@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AircraftRegistrationSet xmlns="http://tempuri.org/AircraftRegistrationSet.xsd">
+  <TR>
+    <TYPE>AA</TYPE>
+    <NAME>Reserved - no fee</NAME>
+  </TR>
+  <TR>
+    <TYPE>A</TYPE>
+    <NAME>Fee paid, notice for expiration sent</NAME>
+  </TR>
+  <TR>
+    <TYPE>HD</TYPE>
+    <NAME>2 year hold for canceled N-Numbers</NAME>
+  </TR>
+  <TR>
+    <TYPE>FN</TYPE>
+    <NAME>Fee paid, notice for expiration sent</NAME>
+  </TR>
+  <TR>
+    <TYPE>FP</TYPE>
+    <NAME>Fee paid</NAME>
+  </TR>
+  <TR>
+    <TYPE>MF</TYPE>
+    <NAME>Reserved to manufacturer - no fee, no expiration date</NAME>
+  </TR>
+  <TR>
+    <TYPE>MT</TYPE>
+    <NAME>Reserved to manufacturer - temporary number</NAME>
+  </TR>
+  <TR>
+    <TYPE>NC</TYPE>
+    <NAME>N-Number change is in process</NAME>
+  </TR>
+  <TR>
+    <TYPE>NN</TYPE>
+    <NAME>N-Number change is in process, expiration notice sent</NAME>
+  </TR>
+  <TR>
+    <TYPE>CN</TYPE>
+    <NAME>N-Number change is in process, Expire Notice Sent</NAME>
+  </TR>
+  <TR>
+    <TYPE>CE</TYPE>
+    <NAME>N-Number change Expired</NAME>
+  </TR>
+</AircraftRegistrationSet>

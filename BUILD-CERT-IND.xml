@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<AircraftRegistrationSet xmlns="http://tempuri.org/AircraftRegistrationSet.xsd">
+  <BLD-CERT-IND>
+    <TYPE>0</TYPE>
+    <NAME>Type Certificated</NAME>
+  </BLD-CERT-IND>
+  <BLD-CERT-IND>
+    <TYPE>1</TYPE>
+    <NAME>Not Type Certificated</NAME>
+  </BLD-CERT-IND>
+  <BLD-CERT-IND>
+    <TYPE>2</TYPE>
+    <NAME>Light Sport</NAME>
+  </BLD-CERT-IND>
+</AircraftRegistrationSet>

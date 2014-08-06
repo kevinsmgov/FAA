@@ -43,12 +43,19 @@ namespace FAA
                     }
                 }
                 table.Rows.Add(newRow);
-                Console.WriteLine(String.Format("{0} {1}",table.TableName, table.Rows.Count));
+                //Console.WriteLine(String.Format("{0} {1}",table.TableName, table.Rows.Count));
             }
         }
         public FAA(String zipPath)
         {
             AircraftRegistrationSet = new AircraftRegistrationSet();
+            AircraftRegistrationSet._AC_CAT.ReadXml("AC-CAT.xml");
+            AircraftRegistrationSet._AC_WEIGHT.ReadXml("AC-WEIGHT.xml");
+            AircraftRegistrationSet._BUILD_CERT_IND.ReadXml("BUILD-CERT-IND.xml");
+            AircraftRegistrationSet.TR.ReadXml("TR.xml");
+            AircraftRegistrationSet._TYPE_ACFT.ReadXml("TYPE-ACFT.xml");
+            AircraftRegistrationSet._TYPE_COLLATERAL.ReadXml("TYPE-COLLATERAL.xml");
+            AircraftRegistrationSet._TYPE_ENG.ReadXml("TYPE-ENG.xml");
             using (var zipStream = File.OpenRead(zipPath))
             {
                 using (var zipArchive = new ZipArchive(zipStream))

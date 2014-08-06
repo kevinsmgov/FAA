@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<AircraftRegistrationSet xmlns="http://tempuri.org/AircraftRegistrationSet.xsd">
+  <AC-CAT>
+    <TYPE>1</TYPE>
+    <NAME>Land</NAME>
+  </AC-CAT>
+  <AC-CAT>
+    <TYPE>2</TYPE>
+    <NAME>Sea</NAME>
+  </AC-CAT>
+  <AC-CAT>
+    <TYPE>3</TYPE>
+    <NAME>Amphibian</NAME>
+  </AC-CAT>
+</AircraftRegistrationSet>

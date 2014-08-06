@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<AircraftRegistrationSet xmlns="http://tempuri.org/AircraftRegistrationSet.xsd">
+  <AC-WEIGHT>
+    <TYPE>1</TYPE>
+    <NAME>Up to 12,499</NAME>
+  </AC-WEIGHT>
+  <AC-WEIGHT>
+    <TYPE>2</TYPE>
+    <NAME>12,500 - 19,999</NAME>
+  </AC-WEIGHT>
+  <AC-WEIGHT>
+    <TYPE>3</TYPE>
+    <NAME>20,000 and over</NAME>
+  </AC-WEIGHT>
+</AircraftRegistrationSet>

@@ -38,9 +38,39 @@ namespace FAA {
         
         private _RESERVED_txtDataTable _tableRESERVED_txt;
         
+        private _TYPE_ACFTDataTable _tableTYPE_ACFT;
+        
+        private _TYPE_ENGDataTable _tableTYPE_ENG;
+        
+        private _AC_CATDataTable _tableAC_CAT;
+        
+        private _BUILD_CERT_INDDataTable _tableBUILD_CERT_IND;
+        
+        private _AC_WEIGHTDataTable _tableAC_WEIGHT;
+        
+        private _TYPE_COLLATERALDataTable _tableTYPE_COLLATERAL;
+        
+        private TRDataTable tableTR;
+        
         private global::System.Data.DataRelation _relationENGINE_txt_MASTER_txt;
         
         private global::System.Data.DataRelation _relationACFTREF_txt_MASTER_txt;
+        
+        private global::System.Data.DataRelation _relationTYPE_ACFT_ACFTREF_txt;
+        
+        private global::System.Data.DataRelation _relationTYPE_ENG_ACFTREF_txt;
+        
+        private global::System.Data.DataRelation _relationAC_CAT_ACFTREF_txt;
+        
+        private global::System.Data.DataRelation _relationBUILD_CERT_IND_ACFTREF_txt;
+        
+        private global::System.Data.DataRelation _relationAC_WEIGHT_ACFTREF_txt;
+        
+        private global::System.Data.DataRelation _relationTYPE_COLLATERAL_DOCINDEX_txt;
+        
+        private global::System.Data.DataRelation _relationTR_RESERVED_txt;
+        
+        private global::System.Data.DataRelation _relationTYPE_ENG_ENGINE_txt;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -90,6 +120,27 @@ namespace FAA {
                 }
                 if ((ds.Tables["RESERVED.txt"] != null)) {
                     base.Tables.Add(new _RESERVED_txtDataTable(ds.Tables["RESERVED.txt"]));
+                }
+                if ((ds.Tables["TYPE-ACFT"] != null)) {
+                    base.Tables.Add(new _TYPE_ACFTDataTable(ds.Tables["TYPE-ACFT"]));
+                }
+                if ((ds.Tables["TYPE-ENG"] != null)) {
+                    base.Tables.Add(new _TYPE_ENGDataTable(ds.Tables["TYPE-ENG"]));
+                }
+                if ((ds.Tables["AC-CAT"] != null)) {
+                    base.Tables.Add(new _AC_CATDataTable(ds.Tables["AC-CAT"]));
+                }
+                if ((ds.Tables["BUILD-CERT-IND"] != null)) {
+                    base.Tables.Add(new _BUILD_CERT_INDDataTable(ds.Tables["BUILD-CERT-IND"]));
+                }
+                if ((ds.Tables["AC-WEIGHT"] != null)) {
+                    base.Tables.Add(new _AC_WEIGHTDataTable(ds.Tables["AC-WEIGHT"]));
+                }
+                if ((ds.Tables["TYPE-COLLATERAL"] != null)) {
+                    base.Tables.Add(new _TYPE_COLLATERALDataTable(ds.Tables["TYPE-COLLATERAL"]));
+                }
+                if ((ds.Tables["TR"] != null)) {
+                    base.Tables.Add(new TRDataTable(ds.Tables["TR"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -181,6 +232,76 @@ namespace FAA {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public _TYPE_ACFTDataTable _TYPE_ACFT {
+            get {
+                return this._tableTYPE_ACFT;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public _TYPE_ENGDataTable _TYPE_ENG {
+            get {
+                return this._tableTYPE_ENG;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public _AC_CATDataTable _AC_CAT {
+            get {
+                return this._tableAC_CAT;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public _BUILD_CERT_INDDataTable _BUILD_CERT_IND {
+            get {
+                return this._tableBUILD_CERT_IND;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public _AC_WEIGHTDataTable _AC_WEIGHT {
+            get {
+                return this._tableAC_WEIGHT;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public _TYPE_COLLATERALDataTable _TYPE_COLLATERAL {
+            get {
+                return this._tableTYPE_COLLATERAL;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public TRDataTable TR {
+            get {
+                return this.tableTR;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -267,6 +388,27 @@ namespace FAA {
                 if ((ds.Tables["RESERVED.txt"] != null)) {
                     base.Tables.Add(new _RESERVED_txtDataTable(ds.Tables["RESERVED.txt"]));
                 }
+                if ((ds.Tables["TYPE-ACFT"] != null)) {
+                    base.Tables.Add(new _TYPE_ACFTDataTable(ds.Tables["TYPE-ACFT"]));
+                }
+                if ((ds.Tables["TYPE-ENG"] != null)) {
+                    base.Tables.Add(new _TYPE_ENGDataTable(ds.Tables["TYPE-ENG"]));
+                }
+                if ((ds.Tables["AC-CAT"] != null)) {
+                    base.Tables.Add(new _AC_CATDataTable(ds.Tables["AC-CAT"]));
+                }
+                if ((ds.Tables["BUILD-CERT-IND"] != null)) {
+                    base.Tables.Add(new _BUILD_CERT_INDDataTable(ds.Tables["BUILD-CERT-IND"]));
+                }
+                if ((ds.Tables["AC-WEIGHT"] != null)) {
+                    base.Tables.Add(new _AC_WEIGHTDataTable(ds.Tables["AC-WEIGHT"]));
+                }
+                if ((ds.Tables["TYPE-COLLATERAL"] != null)) {
+                    base.Tables.Add(new _TYPE_COLLATERALDataTable(ds.Tables["TYPE-COLLATERAL"]));
+                }
+                if ((ds.Tables["TR"] != null)) {
+                    base.Tables.Add(new TRDataTable(ds.Tables["TR"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -342,8 +484,58 @@ namespace FAA {
                     this._tableRESERVED_txt.InitVars();
                 }
             }
+            this._tableTYPE_ACFT = ((_TYPE_ACFTDataTable)(base.Tables["TYPE-ACFT"]));
+            if ((initTable == true)) {
+                if ((this._tableTYPE_ACFT != null)) {
+                    this._tableTYPE_ACFT.InitVars();
+                }
+            }
+            this._tableTYPE_ENG = ((_TYPE_ENGDataTable)(base.Tables["TYPE-ENG"]));
+            if ((initTable == true)) {
+                if ((this._tableTYPE_ENG != null)) {
+                    this._tableTYPE_ENG.InitVars();
+                }
+            }
+            this._tableAC_CAT = ((_AC_CATDataTable)(base.Tables["AC-CAT"]));
+            if ((initTable == true)) {
+                if ((this._tableAC_CAT != null)) {
+                    this._tableAC_CAT.InitVars();
+                }
+            }
+            this._tableBUILD_CERT_IND = ((_BUILD_CERT_INDDataTable)(base.Tables["BUILD-CERT-IND"]));
+            if ((initTable == true)) {
+                if ((this._tableBUILD_CERT_IND != null)) {
+                    this._tableBUILD_CERT_IND.InitVars();
+                }
+            }
+            this._tableAC_WEIGHT = ((_AC_WEIGHTDataTable)(base.Tables["AC-WEIGHT"]));
+            if ((initTable == true)) {
+                if ((this._tableAC_WEIGHT != null)) {
+                    this._tableAC_WEIGHT.InitVars();
+                }
+            }
+            this._tableTYPE_COLLATERAL = ((_TYPE_COLLATERALDataTable)(base.Tables["TYPE-COLLATERAL"]));
+            if ((initTable == true)) {
+                if ((this._tableTYPE_COLLATERAL != null)) {
+                    this._tableTYPE_COLLATERAL.InitVars();
+                }
+            }
+            this.tableTR = ((TRDataTable)(base.Tables["TR"]));
+            if ((initTable == true)) {
+                if ((this.tableTR != null)) {
+                    this.tableTR.InitVars();
+                }
+            }
             this._relationENGINE_txt_MASTER_txt = this.Relations["ENGINE.txt_MASTER.txt"];
             this._relationACFTREF_txt_MASTER_txt = this.Relations["ACFTREF.txt_MASTER.txt"];
+            this._relationTYPE_ACFT_ACFTREF_txt = this.Relations["TYPE-ACFT_ACFTREF.txt"];
+            this._relationTYPE_ENG_ACFTREF_txt = this.Relations["TYPE-ENG_ACFTREF.txt"];
+            this._relationAC_CAT_ACFTREF_txt = this.Relations["AC-CAT_ACFTREF.txt"];
+            this._relationBUILD_CERT_IND_ACFTREF_txt = this.Relations["BUILD-CERT-IND_ACFTREF.txt"];
+            this._relationAC_WEIGHT_ACFTREF_txt = this.Relations["AC-WEIGHT_ACFTREF.txt"];
+            this._relationTYPE_COLLATERAL_DOCINDEX_txt = this.Relations["TYPE-COLLATERAL_DOCINDEX.txt"];
+            this._relationTR_RESERVED_txt = this.Relations["TR_RESERVED.txt"];
+            this._relationTYPE_ENG_ENGINE_txt = this.Relations["TYPE-ENG_ENGINE.txt"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -368,6 +560,20 @@ namespace FAA {
             base.Tables.Add(this._tableMASTER_txt);
             this._tableRESERVED_txt = new _RESERVED_txtDataTable();
             base.Tables.Add(this._tableRESERVED_txt);
+            this._tableTYPE_ACFT = new _TYPE_ACFTDataTable();
+            base.Tables.Add(this._tableTYPE_ACFT);
+            this._tableTYPE_ENG = new _TYPE_ENGDataTable();
+            base.Tables.Add(this._tableTYPE_ENG);
+            this._tableAC_CAT = new _AC_CATDataTable();
+            base.Tables.Add(this._tableAC_CAT);
+            this._tableBUILD_CERT_IND = new _BUILD_CERT_INDDataTable();
+            base.Tables.Add(this._tableBUILD_CERT_IND);
+            this._tableAC_WEIGHT = new _AC_WEIGHTDataTable();
+            base.Tables.Add(this._tableAC_WEIGHT);
+            this._tableTYPE_COLLATERAL = new _TYPE_COLLATERALDataTable();
+            base.Tables.Add(this._tableTYPE_COLLATERAL);
+            this.tableTR = new TRDataTable();
+            base.Tables.Add(this.tableTR);
             this._relationENGINE_txt_MASTER_txt = new global::System.Data.DataRelation("ENGINE.txt_MASTER.txt", new global::System.Data.DataColumn[] {
                         this._tableENGINE_txt.CODEColumn}, new global::System.Data.DataColumn[] {
                         this._tableMASTER_txt.ENG_MFR_MDLColumn}, false);
@@ -376,6 +582,38 @@ namespace FAA {
                         this._tableACFTREF_txt.CODEColumn}, new global::System.Data.DataColumn[] {
                         this._tableMASTER_txt.MFR_MDL_CODEColumn}, false);
             this.Relations.Add(this._relationACFTREF_txt_MASTER_txt);
+            this._relationTYPE_ACFT_ACFTREF_txt = new global::System.Data.DataRelation("TYPE-ACFT_ACFTREF.txt", new global::System.Data.DataColumn[] {
+                        this._tableTYPE_ACFT.TYPEColumn}, new global::System.Data.DataColumn[] {
+                        this._tableACFTREF_txt._TYPE_ACFTColumn}, false);
+            this.Relations.Add(this._relationTYPE_ACFT_ACFTREF_txt);
+            this._relationTYPE_ENG_ACFTREF_txt = new global::System.Data.DataRelation("TYPE-ENG_ACFTREF.txt", new global::System.Data.DataColumn[] {
+                        this._tableTYPE_ENG.TYPEColumn}, new global::System.Data.DataColumn[] {
+                        this._tableACFTREF_txt._TYPE_ENGColumn}, false);
+            this.Relations.Add(this._relationTYPE_ENG_ACFTREF_txt);
+            this._relationAC_CAT_ACFTREF_txt = new global::System.Data.DataRelation("AC-CAT_ACFTREF.txt", new global::System.Data.DataColumn[] {
+                        this._tableAC_CAT.TYPEColumn}, new global::System.Data.DataColumn[] {
+                        this._tableACFTREF_txt._AC_CATColumn}, false);
+            this.Relations.Add(this._relationAC_CAT_ACFTREF_txt);
+            this._relationBUILD_CERT_IND_ACFTREF_txt = new global::System.Data.DataRelation("BUILD-CERT-IND_ACFTREF.txt", new global::System.Data.DataColumn[] {
+                        this._tableBUILD_CERT_IND.TYPEColumn}, new global::System.Data.DataColumn[] {
+                        this._tableACFTREF_txt._BUILD_CERT_INDColumn}, false);
+            this.Relations.Add(this._relationBUILD_CERT_IND_ACFTREF_txt);
+            this._relationAC_WEIGHT_ACFTREF_txt = new global::System.Data.DataRelation("AC-WEIGHT_ACFTREF.txt", new global::System.Data.DataColumn[] {
+                        this._tableAC_WEIGHT.TYPEColumn}, new global::System.Data.DataColumn[] {
+                        this._tableACFTREF_txt._AC_WEIGHTColumn}, false);
+            this.Relations.Add(this._relationAC_WEIGHT_ACFTREF_txt);
+            this._relationTYPE_COLLATERAL_DOCINDEX_txt = new global::System.Data.DataRelation("TYPE-COLLATERAL_DOCINDEX.txt", new global::System.Data.DataColumn[] {
+                        this._tableTYPE_COLLATERAL.TYPEColumn}, new global::System.Data.DataColumn[] {
+                        this._tableDOCINDEX_txt._TYPE_COLLATERALColumn}, false);
+            this.Relations.Add(this._relationTYPE_COLLATERAL_DOCINDEX_txt);
+            this._relationTR_RESERVED_txt = new global::System.Data.DataRelation("TR_RESERVED.txt", new global::System.Data.DataColumn[] {
+                        this.tableTR.TYPEColumn}, new global::System.Data.DataColumn[] {
+                        this._tableRESERVED_txt.TRColumn}, false);
+            this.Relations.Add(this._relationTR_RESERVED_txt);
+            this._relationTYPE_ENG_ENGINE_txt = new global::System.Data.DataRelation("TYPE-ENG_ENGINE.txt", new global::System.Data.DataColumn[] {
+                        this._tableTYPE_ENG.TYPEColumn}, new global::System.Data.DataColumn[] {
+                        this._tableENGINE_txt.TYPEColumn}, false);
+            this.Relations.Add(this._relationTYPE_ENG_ENGINE_txt);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -417,6 +655,48 @@ namespace FAA {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerialize_RESERVED_txt() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerialize_TYPE_ACFT() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerialize_TYPE_ENG() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerialize_AC_CAT() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerialize_BUILD_CERT_IND() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerialize_AC_WEIGHT() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerialize_TYPE_COLLATERAL() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeTR() {
             return false;
         }
         
@@ -495,6 +775,27 @@ namespace FAA {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void _RESERVED_txtRowChangeEventHandler(object sender, _RESERVED_txtRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void _TYPE_ACFTRowChangeEventHandler(object sender, _TYPE_ACFTRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void _TYPE_ENGRowChangeEventHandler(object sender, _TYPE_ENGRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void _AC_CATRowChangeEventHandler(object sender, _AC_CATRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void _BUILD_CERT_INDRowChangeEventHandler(object sender, _BUILD_CERT_INDRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void _AC_WEIGHTRowChangeEventHandler(object sender, _AC_WEIGHTRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void _TYPE_COLLATERALRowChangeEventHandler(object sender, _TYPE_COLLATERALRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void TRRowChangeEventHandler(object sender, TRRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -683,20 +984,35 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _ACFTREF_txtRow Add_ACFTREF_txtRow(string CODE, string MFR, string MODEL, string _TYPE_ACFT, string _TYPE_ENG, string _AC_CAT, string _BUILD_CERT_IND, string _NO_ENG, string _NO_SEATS, string _AC_WEIGHT, string SPEED) {
+            public _ACFTREF_txtRow Add_ACFTREF_txtRow(string CODE, string MFR, string MODEL, _TYPE_ACFTRow _parent_TYPE_ACFTRowByTYPE_ACFT_ACFTREF_txt, _TYPE_ENGRow _parent_TYPE_ENGRowByTYPE_ENG_ACFTREF_txt, _AC_CATRow _parent_AC_CATRowByAC_CAT_ACFTREF_txt, _BUILD_CERT_INDRow _parent_BUILD_CERT_INDRowByBUILD_CERT_IND_ACFTREF_txt, int _NO_ENG, int _NO_SEATS, _AC_WEIGHTRow _parent_AC_WEIGHTRowByAC_WEIGHT_ACFTREF_txt, int SPEED) {
                 _ACFTREF_txtRow row_ACFTREF_txtRow = ((_ACFTREF_txtRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CODE,
                         MFR,
                         MODEL,
-                        _TYPE_ACFT,
-                        _TYPE_ENG,
-                        _AC_CAT,
-                        _BUILD_CERT_IND,
+                        null,
+                        null,
+                        null,
+                        null,
                         _NO_ENG,
                         _NO_SEATS,
-                        _AC_WEIGHT,
+                        null,
                         SPEED};
+                if ((_parent_TYPE_ACFTRowByTYPE_ACFT_ACFTREF_txt != null)) {
+                    columnValuesArray[3] = _parent_TYPE_ACFTRowByTYPE_ACFT_ACFTREF_txt[0];
+                }
+                if ((_parent_TYPE_ENGRowByTYPE_ENG_ACFTREF_txt != null)) {
+                    columnValuesArray[4] = _parent_TYPE_ENGRowByTYPE_ENG_ACFTREF_txt[0];
+                }
+                if ((_parent_AC_CATRowByAC_CAT_ACFTREF_txt != null)) {
+                    columnValuesArray[5] = _parent_AC_CATRowByAC_CAT_ACFTREF_txt[0];
+                }
+                if ((_parent_BUILD_CERT_INDRowByBUILD_CERT_IND_ACFTREF_txt != null)) {
+                    columnValuesArray[6] = _parent_BUILD_CERT_INDRowByBUILD_CERT_IND_ACFTREF_txt[0];
+                }
+                if ((_parent_AC_WEIGHTRowByAC_WEIGHT_ACFTREF_txt != null)) {
+                    columnValuesArray[9] = _parent_AC_WEIGHTRowByAC_WEIGHT_ACFTREF_txt[0];
+                }
                 row_ACFTREF_txtRow.ItemArray = columnValuesArray;
                 this.Rows.Add(row_ACFTREF_txtRow);
                 return row_ACFTREF_txtRow;
@@ -748,35 +1064,35 @@ namespace FAA {
                 base.Columns.Add(this.columnMFR);
                 this.columnMODEL = new global::System.Data.DataColumn("MODEL", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMODEL);
-                this._columnTYPE_ACFT = new global::System.Data.DataColumn("TYPE-ACFT", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnTYPE_ACFT = new global::System.Data.DataColumn("TYPE-ACFT", typeof(int), null, global::System.Data.MappingType.Element);
                 this._columnTYPE_ACFT.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnTYPE_ACFT");
                 this._columnTYPE_ACFT.ExtendedProperties.Add("Generator_UserColumnName", "TYPE-ACFT");
                 base.Columns.Add(this._columnTYPE_ACFT);
-                this._columnTYPE_ENG = new global::System.Data.DataColumn("TYPE-ENG", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnTYPE_ENG = new global::System.Data.DataColumn("TYPE-ENG", typeof(int), null, global::System.Data.MappingType.Element);
                 this._columnTYPE_ENG.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnTYPE_ENG");
                 this._columnTYPE_ENG.ExtendedProperties.Add("Generator_UserColumnName", "TYPE-ENG");
                 base.Columns.Add(this._columnTYPE_ENG);
-                this._columnAC_CAT = new global::System.Data.DataColumn("AC-CAT", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnAC_CAT = new global::System.Data.DataColumn("AC-CAT", typeof(int), null, global::System.Data.MappingType.Element);
                 this._columnAC_CAT.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnAC_CAT");
                 this._columnAC_CAT.ExtendedProperties.Add("Generator_UserColumnName", "AC-CAT");
                 base.Columns.Add(this._columnAC_CAT);
-                this._columnBUILD_CERT_IND = new global::System.Data.DataColumn("BUILD-CERT-IND", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnBUILD_CERT_IND = new global::System.Data.DataColumn("BUILD-CERT-IND", typeof(int), null, global::System.Data.MappingType.Element);
                 this._columnBUILD_CERT_IND.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnBUILD_CERT_IND");
                 this._columnBUILD_CERT_IND.ExtendedProperties.Add("Generator_UserColumnName", "BUILD-CERT-IND");
                 base.Columns.Add(this._columnBUILD_CERT_IND);
-                this._columnNO_ENG = new global::System.Data.DataColumn("NO-ENG", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnNO_ENG = new global::System.Data.DataColumn("NO-ENG", typeof(int), null, global::System.Data.MappingType.Element);
                 this._columnNO_ENG.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnNO_ENG");
                 this._columnNO_ENG.ExtendedProperties.Add("Generator_UserColumnName", "NO-ENG");
                 base.Columns.Add(this._columnNO_ENG);
-                this._columnNO_SEATS = new global::System.Data.DataColumn("NO-SEATS", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnNO_SEATS = new global::System.Data.DataColumn("NO-SEATS", typeof(int), null, global::System.Data.MappingType.Element);
                 this._columnNO_SEATS.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnNO_SEATS");
                 this._columnNO_SEATS.ExtendedProperties.Add("Generator_UserColumnName", "NO-SEATS");
                 base.Columns.Add(this._columnNO_SEATS);
-                this._columnAC_WEIGHT = new global::System.Data.DataColumn("AC-WEIGHT", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnAC_WEIGHT = new global::System.Data.DataColumn("AC-WEIGHT", typeof(int), null, global::System.Data.MappingType.Element);
                 this._columnAC_WEIGHT.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnAC_WEIGHT");
                 this._columnAC_WEIGHT.ExtendedProperties.Add("Generator_UserColumnName", "AC-WEIGHT");
                 base.Columns.Add(this._columnAC_WEIGHT);
-                this.columnSPEED = new global::System.Data.DataColumn("SPEED", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnSPEED = new global::System.Data.DataColumn("SPEED", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSPEED);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCODE}, true));
@@ -2829,10 +3145,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _DOCINDEX_txtRow Add_DOCINDEX_txtRow(string _TYPE_COLLATERAL, string COLLATERAL, string PARTY, string _DOC_ID, string DRDATE, System.DateTime _PROCESSING_DATE, System.DateTime _CORR_DATE, string _CORR_ID, string _SERIAL_ID) {
+            public _DOCINDEX_txtRow Add_DOCINDEX_txtRow(_TYPE_COLLATERALRow _parent_TYPE_COLLATERALRowByTYPE_COLLATERAL_DOCINDEX_txt, string COLLATERAL, string PARTY, string _DOC_ID, System.DateTime DRDATE, System.DateTime _PROCESSING_DATE, System.DateTime _CORR_DATE, string _CORR_ID, string _SERIAL_ID) {
                 _DOCINDEX_txtRow row_DOCINDEX_txtRow = ((_DOCINDEX_txtRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        _TYPE_COLLATERAL,
+                        null,
                         COLLATERAL,
                         PARTY,
                         _DOC_ID,
@@ -2841,6 +3157,9 @@ namespace FAA {
                         _CORR_DATE,
                         _CORR_ID,
                         _SERIAL_ID};
+                if ((_parent_TYPE_COLLATERALRowByTYPE_COLLATERAL_DOCINDEX_txt != null)) {
+                    columnValuesArray[0] = _parent_TYPE_COLLATERALRowByTYPE_COLLATERAL_DOCINDEX_txt[0];
+                }
                 row_DOCINDEX_txtRow.ItemArray = columnValuesArray;
                 this.Rows.Add(row_DOCINDEX_txtRow);
                 return row_DOCINDEX_txtRow;
@@ -2877,7 +3196,7 @@ namespace FAA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this._columnTYPE_COLLATERAL = new global::System.Data.DataColumn("TYPE-COLLATERAL", typeof(string), null, global::System.Data.MappingType.Element);
+                this._columnTYPE_COLLATERAL = new global::System.Data.DataColumn("TYPE-COLLATERAL", typeof(int), null, global::System.Data.MappingType.Element);
                 this._columnTYPE_COLLATERAL.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnTYPE_COLLATERAL");
                 this._columnTYPE_COLLATERAL.ExtendedProperties.Add("Generator_UserColumnName", "TYPE-COLLATERAL");
                 base.Columns.Add(this._columnTYPE_COLLATERAL);
@@ -2889,7 +3208,7 @@ namespace FAA {
                 this._columnDOC_ID.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnDOC_ID");
                 this._columnDOC_ID.ExtendedProperties.Add("Generator_UserColumnName", "DOC-ID");
                 base.Columns.Add(this._columnDOC_ID);
-                this.columnDRDATE = new global::System.Data.DataColumn("DRDATE", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnDRDATE = new global::System.Data.DataColumn("DRDATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDRDATE);
                 this._columnPROCESSING_DATE = new global::System.Data.DataColumn("PROCESSING-DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 this._columnPROCESSING_DATE.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnPROCESSING_DATE");
@@ -3173,15 +3492,18 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _ENGINE_txtRow Add_ENGINE_txtRow(string CODE, string MFR, string MODEL, string TYPE, int HORSEPOWER, int THRUST) {
+            public _ENGINE_txtRow Add_ENGINE_txtRow(string CODE, string MFR, string MODEL, _TYPE_ENGRow _parent_TYPE_ENGRowByTYPE_ENG_ENGINE_txt, int HORSEPOWER, int THRUST) {
                 _ENGINE_txtRow row_ENGINE_txtRow = ((_ENGINE_txtRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CODE,
                         MFR,
                         MODEL,
-                        TYPE,
+                        null,
                         HORSEPOWER,
                         THRUST};
+                if ((_parent_TYPE_ENGRowByTYPE_ENG_ENGINE_txt != null)) {
+                    columnValuesArray[3] = _parent_TYPE_ENGRowByTYPE_ENG_ENGINE_txt[0];
+                }
                 row_ENGINE_txtRow.ItemArray = columnValuesArray;
                 this.Rows.Add(row_ENGINE_txtRow);
                 return row_ENGINE_txtRow;
@@ -3228,7 +3550,7 @@ namespace FAA {
                 base.Columns.Add(this.columnMFR);
                 this.columnMODEL = new global::System.Data.DataColumn("MODEL", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMODEL);
-                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTYPE);
                 this.columnHORSEPOWER = new global::System.Data.DataColumn("HORSEPOWER", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnHORSEPOWER);
@@ -4337,7 +4659,7 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public _RESERVED_txtRow Add_RESERVED_txtRow(string _N_NUMBER, string REGISTRANT, string STREET, string STREET2, string CITY, string STATE, string ZIP_CODE, string RSV_DATE, string TR, System.DateTime EXP_DATE, string _N_NUM_CHG) {
+            public _RESERVED_txtRow Add_RESERVED_txtRow(string _N_NUMBER, string REGISTRANT, string STREET, string STREET2, string CITY, string STATE, string ZIP_CODE, string RSV_DATE, TRRow _parentTRRowByTR_RESERVED_txt, System.DateTime EXP_DATE, string _N_NUM_CHG) {
                 _RESERVED_txtRow row_RESERVED_txtRow = ((_RESERVED_txtRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         _N_NUMBER,
@@ -4348,9 +4670,12 @@ namespace FAA {
                         STATE,
                         ZIP_CODE,
                         RSV_DATE,
-                        TR,
+                        null,
                         EXP_DATE,
                         _N_NUM_CHG};
+                if ((_parentTRRowByTR_RESERVED_txt != null)) {
+                    columnValuesArray[8] = _parentTRRowByTR_RESERVED_txt[0];
+                }
                 row_RESERVED_txtRow.ItemArray = columnValuesArray;
                 this.Rows.Add(row_RESERVED_txtRow);
                 return row_RESERVED_txtRow;
@@ -4555,6 +4880,1922 @@ namespace FAA {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class _TYPE_ACFTDataTable : global::System.Data.TypedTableBase<_TYPE_ACFTRow> {
+            
+            private global::System.Data.DataColumn columnTYPE;
+            
+            private global::System.Data.DataColumn columnNAME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ACFTDataTable() {
+                this.TableName = "TYPE-ACFT";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _TYPE_ACFTDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected _TYPE_ACFTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TYPEColumn {
+                get {
+                    return this.columnTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ACFTRow this[int index] {
+                get {
+                    return ((_TYPE_ACFTRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_ACFTRowChangeEventHandler _TYPE_ACFTRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_ACFTRowChangeEventHandler _TYPE_ACFTRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_ACFTRowChangeEventHandler _TYPE_ACFTRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_ACFTRowChangeEventHandler _TYPE_ACFTRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Add_TYPE_ACFTRow(_TYPE_ACFTRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ACFTRow Add_TYPE_ACFTRow(int TYPE, string NAME) {
+                _TYPE_ACFTRow row_TYPE_ACFTRow = ((_TYPE_ACFTRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TYPE,
+                        NAME};
+                row_TYPE_ACFTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_TYPE_ACFTRow);
+                return row_TYPE_ACFTRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ACFTRow FindByTYPE(int TYPE) {
+                return ((_TYPE_ACFTRow)(this.Rows.Find(new object[] {
+                            TYPE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                _TYPE_ACFTDataTable cln = ((_TYPE_ACFTDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new _TYPE_ACFTDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTYPE = base.Columns["TYPE"];
+                this.columnNAME = base.Columns["NAME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTYPE}, true));
+                this.columnTYPE.AllowDBNull = false;
+                this.columnTYPE.Unique = true;
+                this.ExtendedProperties.Add("Generator_TableVarName", "_tableTYPE_ACFT");
+                this.ExtendedProperties.Add("Generator_UserTableName", "TYPE-ACFT");
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ACFTRow New_TYPE_ACFTRow() {
+                return ((_TYPE_ACFTRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new _TYPE_ACFTRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(_TYPE_ACFTRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this._TYPE_ACFTRowChanged != null)) {
+                    this._TYPE_ACFTRowChanged(this, new _TYPE_ACFTRowChangeEvent(((_TYPE_ACFTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this._TYPE_ACFTRowChanging != null)) {
+                    this._TYPE_ACFTRowChanging(this, new _TYPE_ACFTRowChangeEvent(((_TYPE_ACFTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this._TYPE_ACFTRowDeleted != null)) {
+                    this._TYPE_ACFTRowDeleted(this, new _TYPE_ACFTRowChangeEvent(((_TYPE_ACFTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this._TYPE_ACFTRowDeleting != null)) {
+                    this._TYPE_ACFTRowDeleting(this, new _TYPE_ACFTRowChangeEvent(((_TYPE_ACFTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Remove_TYPE_ACFTRow(_TYPE_ACFTRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                AircraftRegistrationSet ds = new AircraftRegistrationSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "_TYPE_ACFTDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class _TYPE_ENGDataTable : global::System.Data.TypedTableBase<_TYPE_ENGRow> {
+            
+            private global::System.Data.DataColumn columnTYPE;
+            
+            private global::System.Data.DataColumn columnNAME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ENGDataTable() {
+                this.TableName = "TYPE-ENG";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _TYPE_ENGDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected _TYPE_ENGDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TYPEColumn {
+                get {
+                    return this.columnTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ENGRow this[int index] {
+                get {
+                    return ((_TYPE_ENGRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_ENGRowChangeEventHandler _TYPE_ENGRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_ENGRowChangeEventHandler _TYPE_ENGRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_ENGRowChangeEventHandler _TYPE_ENGRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_ENGRowChangeEventHandler _TYPE_ENGRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Add_TYPE_ENGRow(_TYPE_ENGRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ENGRow Add_TYPE_ENGRow(int TYPE, string NAME) {
+                _TYPE_ENGRow row_TYPE_ENGRow = ((_TYPE_ENGRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TYPE,
+                        NAME};
+                row_TYPE_ENGRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_TYPE_ENGRow);
+                return row_TYPE_ENGRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ENGRow FindByTYPE(int TYPE) {
+                return ((_TYPE_ENGRow)(this.Rows.Find(new object[] {
+                            TYPE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                _TYPE_ENGDataTable cln = ((_TYPE_ENGDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new _TYPE_ENGDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTYPE = base.Columns["TYPE"];
+                this.columnNAME = base.Columns["NAME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTYPE}, true));
+                this.columnTYPE.AllowDBNull = false;
+                this.columnTYPE.Unique = true;
+                this.ExtendedProperties.Add("Generator_TableVarName", "_tableTYPE_ENG");
+                this.ExtendedProperties.Add("Generator_UserTableName", "TYPE-ENG");
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ENGRow New_TYPE_ENGRow() {
+                return ((_TYPE_ENGRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new _TYPE_ENGRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(_TYPE_ENGRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this._TYPE_ENGRowChanged != null)) {
+                    this._TYPE_ENGRowChanged(this, new _TYPE_ENGRowChangeEvent(((_TYPE_ENGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this._TYPE_ENGRowChanging != null)) {
+                    this._TYPE_ENGRowChanging(this, new _TYPE_ENGRowChangeEvent(((_TYPE_ENGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this._TYPE_ENGRowDeleted != null)) {
+                    this._TYPE_ENGRowDeleted(this, new _TYPE_ENGRowChangeEvent(((_TYPE_ENGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this._TYPE_ENGRowDeleting != null)) {
+                    this._TYPE_ENGRowDeleting(this, new _TYPE_ENGRowChangeEvent(((_TYPE_ENGRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Remove_TYPE_ENGRow(_TYPE_ENGRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                AircraftRegistrationSet ds = new AircraftRegistrationSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "_TYPE_ENGDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class _AC_CATDataTable : global::System.Data.TypedTableBase<_AC_CATRow> {
+            
+            private global::System.Data.DataColumn columnTYPE;
+            
+            private global::System.Data.DataColumn columnNAME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_CATDataTable() {
+                this.TableName = "AC-CAT";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _AC_CATDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected _AC_CATDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TYPEColumn {
+                get {
+                    return this.columnTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_CATRow this[int index] {
+                get {
+                    return ((_AC_CATRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _AC_CATRowChangeEventHandler _AC_CATRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _AC_CATRowChangeEventHandler _AC_CATRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _AC_CATRowChangeEventHandler _AC_CATRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _AC_CATRowChangeEventHandler _AC_CATRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Add_AC_CATRow(_AC_CATRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_CATRow Add_AC_CATRow(int TYPE, string NAME) {
+                _AC_CATRow row_AC_CATRow = ((_AC_CATRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TYPE,
+                        NAME};
+                row_AC_CATRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_AC_CATRow);
+                return row_AC_CATRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_CATRow FindByTYPE(int TYPE) {
+                return ((_AC_CATRow)(this.Rows.Find(new object[] {
+                            TYPE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                _AC_CATDataTable cln = ((_AC_CATDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new _AC_CATDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTYPE = base.Columns["TYPE"];
+                this.columnNAME = base.Columns["NAME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTYPE}, true));
+                this.columnTYPE.AllowDBNull = false;
+                this.columnTYPE.Unique = true;
+                this.ExtendedProperties.Add("Generator_TableVarName", "_tableAC_CAT");
+                this.ExtendedProperties.Add("Generator_UserTableName", "AC-CAT");
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_CATRow New_AC_CATRow() {
+                return ((_AC_CATRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new _AC_CATRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(_AC_CATRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this._AC_CATRowChanged != null)) {
+                    this._AC_CATRowChanged(this, new _AC_CATRowChangeEvent(((_AC_CATRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this._AC_CATRowChanging != null)) {
+                    this._AC_CATRowChanging(this, new _AC_CATRowChangeEvent(((_AC_CATRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this._AC_CATRowDeleted != null)) {
+                    this._AC_CATRowDeleted(this, new _AC_CATRowChangeEvent(((_AC_CATRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this._AC_CATRowDeleting != null)) {
+                    this._AC_CATRowDeleting(this, new _AC_CATRowChangeEvent(((_AC_CATRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Remove_AC_CATRow(_AC_CATRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                AircraftRegistrationSet ds = new AircraftRegistrationSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "_AC_CATDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class _BUILD_CERT_INDDataTable : global::System.Data.TypedTableBase<_BUILD_CERT_INDRow> {
+            
+            private global::System.Data.DataColumn columnTYPE;
+            
+            private global::System.Data.DataColumn columnNAME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _BUILD_CERT_INDDataTable() {
+                this.TableName = "BUILD-CERT-IND";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _BUILD_CERT_INDDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected _BUILD_CERT_INDDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TYPEColumn {
+                get {
+                    return this.columnTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _BUILD_CERT_INDRow this[int index] {
+                get {
+                    return ((_BUILD_CERT_INDRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _BUILD_CERT_INDRowChangeEventHandler _BUILD_CERT_INDRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _BUILD_CERT_INDRowChangeEventHandler _BUILD_CERT_INDRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _BUILD_CERT_INDRowChangeEventHandler _BUILD_CERT_INDRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _BUILD_CERT_INDRowChangeEventHandler _BUILD_CERT_INDRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Add_BUILD_CERT_INDRow(_BUILD_CERT_INDRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _BUILD_CERT_INDRow Add_BUILD_CERT_INDRow(int TYPE, string NAME) {
+                _BUILD_CERT_INDRow row_BUILD_CERT_INDRow = ((_BUILD_CERT_INDRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TYPE,
+                        NAME};
+                row_BUILD_CERT_INDRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_BUILD_CERT_INDRow);
+                return row_BUILD_CERT_INDRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _BUILD_CERT_INDRow FindByTYPE(int TYPE) {
+                return ((_BUILD_CERT_INDRow)(this.Rows.Find(new object[] {
+                            TYPE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                _BUILD_CERT_INDDataTable cln = ((_BUILD_CERT_INDDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new _BUILD_CERT_INDDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTYPE = base.Columns["TYPE"];
+                this.columnNAME = base.Columns["NAME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTYPE}, true));
+                this.columnTYPE.AllowDBNull = false;
+                this.columnTYPE.Unique = true;
+                this.ExtendedProperties.Add("Generator_TableVarName", "_tableBUILD_CERT_IND");
+                this.ExtendedProperties.Add("Generator_UserTableName", "BUILD-CERT-IND");
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _BUILD_CERT_INDRow New_BUILD_CERT_INDRow() {
+                return ((_BUILD_CERT_INDRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new _BUILD_CERT_INDRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(_BUILD_CERT_INDRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this._BUILD_CERT_INDRowChanged != null)) {
+                    this._BUILD_CERT_INDRowChanged(this, new _BUILD_CERT_INDRowChangeEvent(((_BUILD_CERT_INDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this._BUILD_CERT_INDRowChanging != null)) {
+                    this._BUILD_CERT_INDRowChanging(this, new _BUILD_CERT_INDRowChangeEvent(((_BUILD_CERT_INDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this._BUILD_CERT_INDRowDeleted != null)) {
+                    this._BUILD_CERT_INDRowDeleted(this, new _BUILD_CERT_INDRowChangeEvent(((_BUILD_CERT_INDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this._BUILD_CERT_INDRowDeleting != null)) {
+                    this._BUILD_CERT_INDRowDeleting(this, new _BUILD_CERT_INDRowChangeEvent(((_BUILD_CERT_INDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Remove_BUILD_CERT_INDRow(_BUILD_CERT_INDRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                AircraftRegistrationSet ds = new AircraftRegistrationSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "_BUILD_CERT_INDDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class _AC_WEIGHTDataTable : global::System.Data.TypedTableBase<_AC_WEIGHTRow> {
+            
+            private global::System.Data.DataColumn columnTYPE;
+            
+            private global::System.Data.DataColumn columnNAME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_WEIGHTDataTable() {
+                this.TableName = "AC-WEIGHT";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _AC_WEIGHTDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected _AC_WEIGHTDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TYPEColumn {
+                get {
+                    return this.columnTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_WEIGHTRow this[int index] {
+                get {
+                    return ((_AC_WEIGHTRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _AC_WEIGHTRowChangeEventHandler _AC_WEIGHTRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _AC_WEIGHTRowChangeEventHandler _AC_WEIGHTRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _AC_WEIGHTRowChangeEventHandler _AC_WEIGHTRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _AC_WEIGHTRowChangeEventHandler _AC_WEIGHTRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Add_AC_WEIGHTRow(_AC_WEIGHTRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_WEIGHTRow Add_AC_WEIGHTRow(int TYPE, string NAME) {
+                _AC_WEIGHTRow row_AC_WEIGHTRow = ((_AC_WEIGHTRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TYPE,
+                        NAME};
+                row_AC_WEIGHTRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_AC_WEIGHTRow);
+                return row_AC_WEIGHTRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_WEIGHTRow FindByTYPE(int TYPE) {
+                return ((_AC_WEIGHTRow)(this.Rows.Find(new object[] {
+                            TYPE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                _AC_WEIGHTDataTable cln = ((_AC_WEIGHTDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new _AC_WEIGHTDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTYPE = base.Columns["TYPE"];
+                this.columnNAME = base.Columns["NAME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTYPE}, true));
+                this.columnTYPE.AllowDBNull = false;
+                this.columnTYPE.Unique = true;
+                this.ExtendedProperties.Add("Generator_TableVarName", "_tableAC_WEIGHT");
+                this.ExtendedProperties.Add("Generator_UserTableName", "AC-WEIGHT");
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_WEIGHTRow New_AC_WEIGHTRow() {
+                return ((_AC_WEIGHTRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new _AC_WEIGHTRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(_AC_WEIGHTRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this._AC_WEIGHTRowChanged != null)) {
+                    this._AC_WEIGHTRowChanged(this, new _AC_WEIGHTRowChangeEvent(((_AC_WEIGHTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this._AC_WEIGHTRowChanging != null)) {
+                    this._AC_WEIGHTRowChanging(this, new _AC_WEIGHTRowChangeEvent(((_AC_WEIGHTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this._AC_WEIGHTRowDeleted != null)) {
+                    this._AC_WEIGHTRowDeleted(this, new _AC_WEIGHTRowChangeEvent(((_AC_WEIGHTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this._AC_WEIGHTRowDeleting != null)) {
+                    this._AC_WEIGHTRowDeleting(this, new _AC_WEIGHTRowChangeEvent(((_AC_WEIGHTRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Remove_AC_WEIGHTRow(_AC_WEIGHTRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                AircraftRegistrationSet ds = new AircraftRegistrationSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "_AC_WEIGHTDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class _TYPE_COLLATERALDataTable : global::System.Data.TypedTableBase<_TYPE_COLLATERALRow> {
+            
+            private global::System.Data.DataColumn columnTYPE;
+            
+            private global::System.Data.DataColumn columnNAME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_COLLATERALDataTable() {
+                this.TableName = "TYPE-COLLATERAL";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _TYPE_COLLATERALDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected _TYPE_COLLATERALDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TYPEColumn {
+                get {
+                    return this.columnTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_COLLATERALRow this[int index] {
+                get {
+                    return ((_TYPE_COLLATERALRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_COLLATERALRowChangeEventHandler _TYPE_COLLATERALRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_COLLATERALRowChangeEventHandler _TYPE_COLLATERALRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_COLLATERALRowChangeEventHandler _TYPE_COLLATERALRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event _TYPE_COLLATERALRowChangeEventHandler _TYPE_COLLATERALRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Add_TYPE_COLLATERALRow(_TYPE_COLLATERALRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_COLLATERALRow Add_TYPE_COLLATERALRow(int TYPE, string NAME) {
+                _TYPE_COLLATERALRow row_TYPE_COLLATERALRow = ((_TYPE_COLLATERALRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TYPE,
+                        NAME};
+                row_TYPE_COLLATERALRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_TYPE_COLLATERALRow);
+                return row_TYPE_COLLATERALRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_COLLATERALRow FindByTYPE(int TYPE) {
+                return ((_TYPE_COLLATERALRow)(this.Rows.Find(new object[] {
+                            TYPE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                _TYPE_COLLATERALDataTable cln = ((_TYPE_COLLATERALDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new _TYPE_COLLATERALDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTYPE = base.Columns["TYPE"];
+                this.columnNAME = base.Columns["NAME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTYPE}, true));
+                this.columnTYPE.AllowDBNull = false;
+                this.columnTYPE.Unique = true;
+                this.ExtendedProperties.Add("Generator_TableVarName", "_tableTYPE_COLLATERAL");
+                this.ExtendedProperties.Add("Generator_UserTableName", "TYPE-COLLATERAL");
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_COLLATERALRow New_TYPE_COLLATERALRow() {
+                return ((_TYPE_COLLATERALRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new _TYPE_COLLATERALRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(_TYPE_COLLATERALRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this._TYPE_COLLATERALRowChanged != null)) {
+                    this._TYPE_COLLATERALRowChanged(this, new _TYPE_COLLATERALRowChangeEvent(((_TYPE_COLLATERALRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this._TYPE_COLLATERALRowChanging != null)) {
+                    this._TYPE_COLLATERALRowChanging(this, new _TYPE_COLLATERALRowChangeEvent(((_TYPE_COLLATERALRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this._TYPE_COLLATERALRowDeleted != null)) {
+                    this._TYPE_COLLATERALRowDeleted(this, new _TYPE_COLLATERALRowChangeEvent(((_TYPE_COLLATERALRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this._TYPE_COLLATERALRowDeleting != null)) {
+                    this._TYPE_COLLATERALRowDeleting(this, new _TYPE_COLLATERALRowChangeEvent(((_TYPE_COLLATERALRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void Remove_TYPE_COLLATERALRow(_TYPE_COLLATERALRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                AircraftRegistrationSet ds = new AircraftRegistrationSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "_TYPE_COLLATERALDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class TRDataTable : global::System.Data.TypedTableBase<TRRow> {
+            
+            private global::System.Data.DataColumn columnTYPE;
+            
+            private global::System.Data.DataColumn columnNAME;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TRDataTable() {
+                this.TableName = "TR";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TRDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected TRDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TYPEColumn {
+                get {
+                    return this.columnTYPE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NAMEColumn {
+                get {
+                    return this.columnNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TRRow this[int index] {
+                get {
+                    return ((TRRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TRRowChangeEventHandler TRRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TRRowChangeEventHandler TRRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TRRowChangeEventHandler TRRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event TRRowChangeEventHandler TRRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddTRRow(TRRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TRRow AddTRRow(string TYPE, string NAME) {
+                TRRow rowTRRow = ((TRRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        TYPE,
+                        NAME};
+                rowTRRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTRRow);
+                return rowTRRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TRRow FindByTYPE(string TYPE) {
+                return ((TRRow)(this.Rows.Find(new object[] {
+                            TYPE})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                TRDataTable cln = ((TRDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new TRDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnTYPE = base.Columns["TYPE"];
+                this.columnNAME = base.Columns["NAME"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnTYPE = new global::System.Data.DataColumn("TYPE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTYPE);
+                this.columnNAME = new global::System.Data.DataColumn("NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNAME);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnTYPE}, true));
+                this.columnTYPE.AllowDBNull = false;
+                this.columnTYPE.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TRRow NewTRRow() {
+                return ((TRRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new TRRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(TRRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.TRRowChanged != null)) {
+                    this.TRRowChanged(this, new TRRowChangeEvent(((TRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.TRRowChanging != null)) {
+                    this.TRRowChanging(this, new TRRowChangeEvent(((TRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.TRRowDeleted != null)) {
+                    this.TRRowDeleted(this, new TRRowChangeEvent(((TRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.TRRowDeleting != null)) {
+                    this.TRRowDeleting(this, new TRRowChangeEvent(((TRRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveTRRow(TRRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                AircraftRegistrationSet ds = new AircraftRegistrationSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "TRDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class _ACFTREF_txtRow : global::System.Data.DataRow {
@@ -4613,10 +6854,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string _TYPE_ACFT {
+            public int _TYPE_ACFT {
                 get {
                     try {
-                        return ((string)(this[this._tableACFTREF_txt._TYPE_ACFTColumn]));
+                        return ((int)(this[this._tableACFTREF_txt._TYPE_ACFTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TYPE-ACFT\' in table \'ACFTREF.txt\' is DBNull.", e);
@@ -4629,10 +6870,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string _TYPE_ENG {
+            public int _TYPE_ENG {
                 get {
                     try {
-                        return ((string)(this[this._tableACFTREF_txt._TYPE_ENGColumn]));
+                        return ((int)(this[this._tableACFTREF_txt._TYPE_ENGColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TYPE-ENG\' in table \'ACFTREF.txt\' is DBNull.", e);
@@ -4645,10 +6886,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string _AC_CAT {
+            public int _AC_CAT {
                 get {
                     try {
-                        return ((string)(this[this._tableACFTREF_txt._AC_CATColumn]));
+                        return ((int)(this[this._tableACFTREF_txt._AC_CATColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'AC-CAT\' in table \'ACFTREF.txt\' is DBNull.", e);
@@ -4661,10 +6902,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string _BUILD_CERT_IND {
+            public int _BUILD_CERT_IND {
                 get {
                     try {
-                        return ((string)(this[this._tableACFTREF_txt._BUILD_CERT_INDColumn]));
+                        return ((int)(this[this._tableACFTREF_txt._BUILD_CERT_INDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'BUILD-CERT-IND\' in table \'ACFTREF.txt\' is DBNull.", e);
@@ -4677,10 +6918,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string _NO_ENG {
+            public int _NO_ENG {
                 get {
                     try {
-                        return ((string)(this[this._tableACFTREF_txt._NO_ENGColumn]));
+                        return ((int)(this[this._tableACFTREF_txt._NO_ENGColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'NO-ENG\' in table \'ACFTREF.txt\' is DBNull.", e);
@@ -4693,10 +6934,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string _NO_SEATS {
+            public int _NO_SEATS {
                 get {
                     try {
-                        return ((string)(this[this._tableACFTREF_txt._NO_SEATSColumn]));
+                        return ((int)(this[this._tableACFTREF_txt._NO_SEATSColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'NO-SEATS\' in table \'ACFTREF.txt\' is DBNull.", e);
@@ -4709,10 +6950,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string _AC_WEIGHT {
+            public int _AC_WEIGHT {
                 get {
                     try {
-                        return ((string)(this[this._tableACFTREF_txt._AC_WEIGHTColumn]));
+                        return ((int)(this[this._tableACFTREF_txt._AC_WEIGHTColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'AC-WEIGHT\' in table \'ACFTREF.txt\' is DBNull.", e);
@@ -4725,10 +6966,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SPEED {
+            public int SPEED {
                 get {
                     try {
-                        return ((string)(this[this._tableACFTREF_txt.SPEEDColumn]));
+                        return ((int)(this[this._tableACFTREF_txt.SPEEDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'SPEED\' in table \'ACFTREF.txt\' is DBNull.", e);
@@ -4736,6 +6977,61 @@ namespace FAA {
                 }
                 set {
                     this[this._tableACFTREF_txt.SPEEDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ACFTRow _TYPE_ACFTRow {
+                get {
+                    return ((_TYPE_ACFTRow)(this.GetParentRow(this.Table.ParentRelations["TYPE-ACFT_ACFTREF.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["TYPE-ACFT_ACFTREF.txt"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ENGRow _TYPE_ENGRow {
+                get {
+                    return ((_TYPE_ENGRow)(this.GetParentRow(this.Table.ParentRelations["TYPE-ENG_ACFTREF.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["TYPE-ENG_ACFTREF.txt"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_CATRow _AC_CATRow {
+                get {
+                    return ((_AC_CATRow)(this.GetParentRow(this.Table.ParentRelations["AC-CAT_ACFTREF.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["AC-CAT_ACFTREF.txt"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _BUILD_CERT_INDRow _BUILD_CERT_INDRow {
+                get {
+                    return ((_BUILD_CERT_INDRow)(this.GetParentRow(this.Table.ParentRelations["BUILD-CERT-IND_ACFTREF.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["BUILD-CERT-IND_ACFTREF.txt"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_WEIGHTRow _AC_WEIGHTRow {
+                get {
+                    return ((_AC_WEIGHTRow)(this.GetParentRow(this.Table.ParentRelations["AC-WEIGHT_ACFTREF.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["AC-WEIGHT_ACFTREF.txt"]);
                 }
             }
             
@@ -7011,9 +9307,9 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string _TYPE_COLLATERAL {
+            public int _TYPE_COLLATERAL {
                 get {
-                    return ((string)(this[this._tableDOCINDEX_txt._TYPE_COLLATERALColumn]));
+                    return ((int)(this[this._tableDOCINDEX_txt._TYPE_COLLATERALColumn]));
                 }
                 set {
                     this[this._tableDOCINDEX_txt._TYPE_COLLATERALColumn] = value;
@@ -7070,10 +9366,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DRDATE {
+            public System.DateTime DRDATE {
                 get {
                     try {
-                        return ((string)(this[this._tableDOCINDEX_txt.DRDATEColumn]));
+                        return ((global::System.DateTime)(this[this._tableDOCINDEX_txt.DRDATEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'DRDATE\' in table \'DOCINDEX.txt\' is DBNull.", e);
@@ -7145,6 +9441,17 @@ namespace FAA {
                 }
                 set {
                     this[this._tableDOCINDEX_txt._SERIAL_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_COLLATERALRow _TYPE_COLLATERALRow {
+                get {
+                    return ((_TYPE_COLLATERALRow)(this.GetParentRow(this.Table.ParentRelations["TYPE-COLLATERAL_DOCINDEX.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["TYPE-COLLATERAL_DOCINDEX.txt"]);
                 }
             }
             
@@ -7304,10 +9611,10 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string TYPE {
+            public int TYPE {
                 get {
                     try {
-                        return ((string)(this[this._tableENGINE_txt.TYPEColumn]));
+                        return ((int)(this[this._tableENGINE_txt.TYPEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'TYPE\' in table \'ENGINE.txt\' is DBNull.", e);
@@ -7347,6 +9654,17 @@ namespace FAA {
                 }
                 set {
                     this[this._tableENGINE_txt.THRUSTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ENGRow _TYPE_ENGRow {
+                get {
+                    return ((_TYPE_ENGRow)(this.GetParentRow(this.Table.ParentRelations["TYPE-ENG_ENGINE.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["TYPE-ENG_ENGINE.txt"]);
                 }
             }
             
@@ -8581,6 +10899,17 @@ namespace FAA {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TRRow TRRow {
+                get {
+                    return ((TRRow)(this.GetParentRow(this.Table.ParentRelations["TR_RESERVED.txt"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["TR_RESERVED.txt"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsREGISTRANTNull() {
                 return this.IsNull(this._tableRESERVED_txt.REGISTRANTColumn);
             }
@@ -8697,6 +11026,472 @@ namespace FAA {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Set_N_NUM_CHGNull() {
                 this[this._tableRESERVED_txt._N_NUM_CHGColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class _TYPE_ACFTRow : global::System.Data.DataRow {
+            
+            private _TYPE_ACFTDataTable _tableTYPE_ACFT;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _TYPE_ACFTRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this._tableTYPE_ACFT = ((_TYPE_ACFTDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TYPE {
+                get {
+                    return ((int)(this[this._tableTYPE_ACFT.TYPEColumn]));
+                }
+                set {
+                    this[this._tableTYPE_ACFT.TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NAME {
+                get {
+                    try {
+                        return ((string)(this[this._tableTYPE_ACFT.NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'TYPE-ACFT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableTYPE_ACFT.NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNAMENull() {
+                return this.IsNull(this._tableTYPE_ACFT.NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNAMENull() {
+                this[this._tableTYPE_ACFT.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _ACFTREF_txtRow[] _GetACFTREF_txtRows() {
+                if ((this.Table.ChildRelations["TYPE-ACFT_ACFTREF.txt"] == null)) {
+                    return new _ACFTREF_txtRow[0];
+                }
+                else {
+                    return ((_ACFTREF_txtRow[])(base.GetChildRows(this.Table.ChildRelations["TYPE-ACFT_ACFTREF.txt"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class _TYPE_ENGRow : global::System.Data.DataRow {
+            
+            private _TYPE_ENGDataTable _tableTYPE_ENG;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _TYPE_ENGRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this._tableTYPE_ENG = ((_TYPE_ENGDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TYPE {
+                get {
+                    return ((int)(this[this._tableTYPE_ENG.TYPEColumn]));
+                }
+                set {
+                    this[this._tableTYPE_ENG.TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NAME {
+                get {
+                    try {
+                        return ((string)(this[this._tableTYPE_ENG.NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'TYPE-ENG\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableTYPE_ENG.NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNAMENull() {
+                return this.IsNull(this._tableTYPE_ENG.NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNAMENull() {
+                this[this._tableTYPE_ENG.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _ACFTREF_txtRow[] _GetACFTREF_txtRows() {
+                if ((this.Table.ChildRelations["TYPE-ENG_ACFTREF.txt"] == null)) {
+                    return new _ACFTREF_txtRow[0];
+                }
+                else {
+                    return ((_ACFTREF_txtRow[])(base.GetChildRows(this.Table.ChildRelations["TYPE-ENG_ACFTREF.txt"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _ENGINE_txtRow[] _GetENGINE_txtRows() {
+                if ((this.Table.ChildRelations["TYPE-ENG_ENGINE.txt"] == null)) {
+                    return new _ENGINE_txtRow[0];
+                }
+                else {
+                    return ((_ENGINE_txtRow[])(base.GetChildRows(this.Table.ChildRelations["TYPE-ENG_ENGINE.txt"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class _AC_CATRow : global::System.Data.DataRow {
+            
+            private _AC_CATDataTable _tableAC_CAT;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _AC_CATRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this._tableAC_CAT = ((_AC_CATDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TYPE {
+                get {
+                    return ((int)(this[this._tableAC_CAT.TYPEColumn]));
+                }
+                set {
+                    this[this._tableAC_CAT.TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NAME {
+                get {
+                    try {
+                        return ((string)(this[this._tableAC_CAT.NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'AC-CAT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableAC_CAT.NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNAMENull() {
+                return this.IsNull(this._tableAC_CAT.NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNAMENull() {
+                this[this._tableAC_CAT.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _ACFTREF_txtRow[] _GetACFTREF_txtRows() {
+                if ((this.Table.ChildRelations["AC-CAT_ACFTREF.txt"] == null)) {
+                    return new _ACFTREF_txtRow[0];
+                }
+                else {
+                    return ((_ACFTREF_txtRow[])(base.GetChildRows(this.Table.ChildRelations["AC-CAT_ACFTREF.txt"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class _BUILD_CERT_INDRow : global::System.Data.DataRow {
+            
+            private _BUILD_CERT_INDDataTable _tableBUILD_CERT_IND;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _BUILD_CERT_INDRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this._tableBUILD_CERT_IND = ((_BUILD_CERT_INDDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TYPE {
+                get {
+                    return ((int)(this[this._tableBUILD_CERT_IND.TYPEColumn]));
+                }
+                set {
+                    this[this._tableBUILD_CERT_IND.TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NAME {
+                get {
+                    try {
+                        return ((string)(this[this._tableBUILD_CERT_IND.NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'BUILD-CERT-IND\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableBUILD_CERT_IND.NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNAMENull() {
+                return this.IsNull(this._tableBUILD_CERT_IND.NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNAMENull() {
+                this[this._tableBUILD_CERT_IND.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _ACFTREF_txtRow[] _GetACFTREF_txtRows() {
+                if ((this.Table.ChildRelations["BUILD-CERT-IND_ACFTREF.txt"] == null)) {
+                    return new _ACFTREF_txtRow[0];
+                }
+                else {
+                    return ((_ACFTREF_txtRow[])(base.GetChildRows(this.Table.ChildRelations["BUILD-CERT-IND_ACFTREF.txt"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class _AC_WEIGHTRow : global::System.Data.DataRow {
+            
+            private _AC_WEIGHTDataTable _tableAC_WEIGHT;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _AC_WEIGHTRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this._tableAC_WEIGHT = ((_AC_WEIGHTDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TYPE {
+                get {
+                    return ((int)(this[this._tableAC_WEIGHT.TYPEColumn]));
+                }
+                set {
+                    this[this._tableAC_WEIGHT.TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NAME {
+                get {
+                    try {
+                        return ((string)(this[this._tableAC_WEIGHT.NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'AC-WEIGHT\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableAC_WEIGHT.NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNAMENull() {
+                return this.IsNull(this._tableAC_WEIGHT.NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNAMENull() {
+                this[this._tableAC_WEIGHT.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _ACFTREF_txtRow[] _GetACFTREF_txtRows() {
+                if ((this.Table.ChildRelations["AC-WEIGHT_ACFTREF.txt"] == null)) {
+                    return new _ACFTREF_txtRow[0];
+                }
+                else {
+                    return ((_ACFTREF_txtRow[])(base.GetChildRows(this.Table.ChildRelations["AC-WEIGHT_ACFTREF.txt"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class _TYPE_COLLATERALRow : global::System.Data.DataRow {
+            
+            private _TYPE_COLLATERALDataTable _tableTYPE_COLLATERAL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal _TYPE_COLLATERALRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this._tableTYPE_COLLATERAL = ((_TYPE_COLLATERALDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TYPE {
+                get {
+                    return ((int)(this[this._tableTYPE_COLLATERAL.TYPEColumn]));
+                }
+                set {
+                    this[this._tableTYPE_COLLATERAL.TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NAME {
+                get {
+                    try {
+                        return ((string)(this[this._tableTYPE_COLLATERAL.NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'TYPE-COLLATERAL\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tableTYPE_COLLATERAL.NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNAMENull() {
+                return this.IsNull(this._tableTYPE_COLLATERAL.NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNAMENull() {
+                this[this._tableTYPE_COLLATERAL.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _DOCINDEX_txtRow[] _GetDOCINDEX_txtRows() {
+                if ((this.Table.ChildRelations["TYPE-COLLATERAL_DOCINDEX.txt"] == null)) {
+                    return new _DOCINDEX_txtRow[0];
+                }
+                else {
+                    return ((_DOCINDEX_txtRow[])(base.GetChildRows(this.Table.ChildRelations["TYPE-COLLATERAL_DOCINDEX.txt"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class TRRow : global::System.Data.DataRow {
+            
+            private TRDataTable tableTR;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal TRRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableTR = ((TRDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TYPE {
+                get {
+                    return ((string)(this[this.tableTR.TYPEColumn]));
+                }
+                set {
+                    this[this.tableTR.TYPEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableTR.NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NAME\' in table \'TR\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTR.NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNAMENull() {
+                return this.IsNull(this.tableTR.NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNAMENull() {
+                this[this.tableTR.NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _RESERVED_txtRow[] _GetRESERVED_txtRows() {
+                if ((this.Table.ChildRelations["TR_RESERVED.txt"] == null)) {
+                    return new _RESERVED_txtRow[0];
+                }
+                else {
+                    return ((_RESERVED_txtRow[])(base.GetChildRows(this.Table.ChildRelations["TR_RESERVED.txt"])));
+                }
             }
         }
         
@@ -8924,6 +11719,244 @@ namespace FAA {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public _RESERVED_txtRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class _TYPE_ACFTRowChangeEvent : global::System.EventArgs {
+            
+            private _TYPE_ACFTRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ACFTRowChangeEvent(_TYPE_ACFTRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ACFTRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class _TYPE_ENGRowChangeEvent : global::System.EventArgs {
+            
+            private _TYPE_ENGRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ENGRowChangeEvent(_TYPE_ENGRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_ENGRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class _AC_CATRowChangeEvent : global::System.EventArgs {
+            
+            private _AC_CATRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_CATRowChangeEvent(_AC_CATRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_CATRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class _BUILD_CERT_INDRowChangeEvent : global::System.EventArgs {
+            
+            private _BUILD_CERT_INDRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _BUILD_CERT_INDRowChangeEvent(_BUILD_CERT_INDRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _BUILD_CERT_INDRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class _AC_WEIGHTRowChangeEvent : global::System.EventArgs {
+            
+            private _AC_WEIGHTRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_WEIGHTRowChangeEvent(_AC_WEIGHTRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _AC_WEIGHTRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class _TYPE_COLLATERALRowChangeEvent : global::System.EventArgs {
+            
+            private _TYPE_COLLATERALRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_COLLATERALRowChangeEvent(_TYPE_COLLATERALRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public _TYPE_COLLATERALRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class TRRowChangeEvent : global::System.EventArgs {
+            
+            private TRRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TRRowChangeEvent(TRRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public TRRow Row {
                 get {
                     return this.eventRow;
                 }
