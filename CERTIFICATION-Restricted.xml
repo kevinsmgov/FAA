@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AircraftRegistrationSet xmlns="http://tempuri.org/AircraftRegistrationSet.xsd">
+  <CERTIFICATION-Restricted>
+    <TYPE>0</TYPE>
+    <NAME>Other</NAME>
+  </CERTIFICATION-Restricted>
+  <CERTIFICATION-Restricted>
+    <TYPE>1</TYPE>
+    <NAME>Agriculture and Pest Control</NAME>
+  </CERTIFICATION-Restricted>
+  <CERTIFICATION-Restricted>
+    <TYPE>2</TYPE>
+    <NAME>Aerial Surveying</NAME>
+  </CERTIFICATION-Restricted>
+  <CERTIFICATION-Restricted>
+    <TYPE>3</TYPE>
+    <NAME>Aerial Advertising</NAME>
+  </CERTIFICATION-Restricted>
+  <CERTIFICATION-Restricted>
+    <TYPE>4</TYPE>
+    <NAME>Forest</NAME>
+  </CERTIFICATION-Restricted>
+  <CERTIFICATION-Restricted>
+    <TYPE>5</TYPE>
+    <NAME>Patrolling</NAME>
+  </CERTIFICATION-Restricted>
+  <CERTIFICATION-Restricted>
+    <TYPE>6</TYPE>
+    <NAME>Weather Control</NAME>
+  </CERTIFICATION-Restricted>
+  <CERTIFICATION-Restricted>
+    <TYPE>7</TYPE>
+    <NAME>Carriage of Cargo</NAME>
+  </CERTIFICATION-Restricted>
+</AircraftRegistrationSet>

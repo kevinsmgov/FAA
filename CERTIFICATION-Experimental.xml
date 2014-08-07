@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AircraftRegistrationSet xmlns="http://tempuri.org/AircraftRegistrationSet.xsd">
+  <CERTIFICATION-Experimental>
+    <TYPE>0</TYPE>
+    <NAME>To show compliance with FAR</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>1</TYPE>
+    <NAME>Research and Development</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>2</TYPE>
+    <NAME>Amateur Built</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>3</TYPE>
+    <NAME>Exhibition</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>4</TYPE>
+    <NAME>Racing</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>5</TYPE>
+    <NAME>Crew Training</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>6</TYPE>
+    <NAME>Market Survey</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>7</TYPE>
+    <NAME>Operating Kit Built Aircraft</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>8A</TYPE>
+    <NAME>Reg. Prior to 01/31/08</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>8B</TYPE>
+    <NAME>Operating Light-Sport Kit-Built</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>8C</TYPE>
+    <NAME>Operating Light-Sport Previously issued cert under 21.190</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>9A</TYPE>
+    <NAME>Unmanned Aircraft - Research and Development</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>9B</TYPE>
+    <NAME>Unmanned Aircraft - Market Survey</NAME>
+  </CERTIFICATION-Experimental>
+  <CERTIFICATION-Experimental>
+    <TYPE>9C</TYPE>
+    <NAME>Unmanned Aircraft - Crew Training</NAME>
+  </CERTIFICATION-Experimental>
+</AircraftRegistrationSet>

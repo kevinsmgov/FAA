@@ -51,6 +51,9 @@ namespace FAA
             AircraftRegistrationSet = new AircraftRegistrationSet();
             AircraftRegistrationSet._AC_CAT.ReadXml("AC-CAT.xml");
             AircraftRegistrationSet._AC_WEIGHT.ReadXml("AC-WEIGHT.xml");
+            AircraftRegistrationSet._CERTIFICATION_Experimental.ReadXml("CERTIFICATION-Experimental");
+            AircraftRegistrationSet._CERTIFICATION_Restricted.ReadXml("CERTIFICATION-Restricted");
+            AircraftRegistrationSet._CERTIFICATION_Standard.ReadXml("CERTIFICATION-Standard");
             AircraftRegistrationSet._BUILD_CERT_IND.ReadXml("BUILD-CERT-IND.xml");
             AircraftRegistrationSet.REGION.ReadXml("REGION.xml");
             AircraftRegistrationSet.TR.ReadXml("TR.xml");
